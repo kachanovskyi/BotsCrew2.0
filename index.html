@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <style>
-    body{width:100%;}
+    body{width:100%;overflow-x: hidden}
     .header{width:100%;height:12vh;}
     .navbar{padding-top:10px !important;border:none;background-color:#FFFFFF;}
     .navbar .container-fluid{margin-left:10%;margin-right:10%;}
@@ -20,7 +20,7 @@
     .bot-btn:hover{background-color:#2F80ED !important;color:#FFF !important;transition-duration:0.5s;text-decoration:none;}
     .logo{width:64px !important;}
     #middle{font-family:"Montserrat";font-style:normal;font-weight:normal;font-size:48px;line-height:100%;letter-spacing:0.0166px;color:#4F4F4F;mix-blend-mode:normal;text-align:center;width:100%;}
-    .slide-1{width:100%;min-height:88vh;padding-top:15%;border:1px solid black;display:block;float:left;}
+    .slide-1{width:100%;min-height:88vh;padding-top:15%;display:block;float:left;}
     .bot-emoji{height:55px;padding-bottom:12px;}
   </style>
 </head>
@@ -58,16 +58,16 @@
   <section id="wrapper">
     <div id="middle">
       <div class="slide-1 container-fluid">
-        <h1>We're awesome chatbots</h1>
-        <h1>development crew <img src="img/bot_emoji.png" class="bot-emoji"></h1>
+        <h1>We are awesome chatbots</h1>
+        <h1>development crew <img src="img/bot_emoji.png" class="bot-emoji hidden-xs"></h1>
         <br>
-        <a href="#" class="menu-item bot-btn">&#9658 Watch video</a>
+        <a href="" class="menu-item bot-btn">&#9658 Watch video</a>
       </div>
 
-      <div class="slide-2 container-fluid" style="padding: 0">
-        <div class="col-lg-5 bot-preview-block">
+      <div class="slide-2 container-fluid" style="padding: 0;">
+        <div class="cos-xs-12 col-lg-5 bot-preview-block">
           <div class="col-lg-3"></div>
-          <img src="img/iphone_image.png" class="iphone-image col-lg-6">
+          <img src="img/iphone_image.png" class="iphone-image col-xs-6 col-sm-3 col-md-4 col-lg-6" style="max-height: inherit">
           <div class="col-lg-3"></div>
         </div>
         <div class="col-lg-7">
@@ -91,7 +91,7 @@
             <img src="img/check_icon.png" class="check-icon"><li>Feel the growth! Now you have 3 billions of potential customers! How great is that? Third string, Carl!</li>
           </ul>
         </div>
-        <div class="col-lg-6 right">
+        <div class="col-xs-12 col-lg-6 right" style="padding: 0;">
           <p><span class="navy-blue-text">Messaging Apps</span> vs <span class="light-blue-text">Networking Apps</span></p>
           <p>Statistics from Buffer and Business Insider</p>
           <img src="img/graphic.png" class="graphic-img">
@@ -120,12 +120,12 @@
         </div>
         <div class="bottom col-lg-12">
           <ul>
-            <li>Hospitality</li>
-            <li>Customer Service</li>
-            <li>Finance</li>
-            <li>E-Commerce</li>
-            <li>Entertainment</li>
-            <li>Concierge service</li>
+            <li><a href="" class="active">Hospitality</a></li>
+            <li><a href="">Customer Service</a></li>
+            <li><a href="">Finance</a></li>
+            <li><a href="">E-Commerce</a></li>
+            <li><a href="">Entertainment</a></li>
+            <li><a href="">Concierge service</a></li>
           </ul>
         </div>
       </div>
