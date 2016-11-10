@@ -6,23 +6,23 @@
   <title>BotsCrew</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <style>
-    body{width:100%;overflow-x: hidden}
-    .header{width:100%;height:12vh;}
-    .navbar{padding-top:10px !important;border:none;background-color:#FFFFFF;}
-    .navbar .container-fluid{margin-left:10%;margin-right:10%;}
-    .navbar-brand{padding:0;}
-    .navbar-brand>img{height:100%;padding:15px;width:auto;}
-    .navbar-brand{display:flex;align-items:center;}
-    .navbar-brand>img{padding:7px 14px;}
-    .menu-item{font-family:"Montserrat", sans-serif;font-style:normal;font-weight:normal;font-size:18px;line-height:100%;color:#4F4F4F !important;mix-blend-mode:normal;}
-    .bot-btn{color:#2F80ED !important;border:1px solid blue;border-radius:4px;margin:7px;padding:7px 15px !important;transition-duration:0.2s;}
-    .bot-btn:hover{background-color:#2F80ED !important;color:#FFF !important;transition-duration:0.5s;text-decoration:none;}
-    .logo{width:64px !important;}
-    #middle{font-family:"Montserrat";font-style:normal;font-weight:normal;font-size:48px;line-height:100%;letter-spacing:0.0166px;color:#4F4F4F;mix-blend-mode:normal;text-align:center;width:100%;}
-    .slide-1{width:100%;min-height:88vh;padding-top:15%;display:block;float:left;}
-    .bot-emoji{height:55px;padding-bottom:12px;}
-  </style>
+  <!--<style>-->
+    <!--body{width:100%;overflow-x: hidden}-->
+    <!--.header{width:100%;height:12vh;}-->
+    <!--.navbar{padding-top:10px !important;border:none;background-color:#FFFFFF;}-->
+    <!--.navbar .container-fluid{margin-left:10%;margin-right:10%;}-->
+    <!--.navbar-brand{padding:0;}-->
+    <!--.navbar-brand>img{height:100%;padding:15px;width:auto;}-->
+    <!--.navbar-brand{display:flex;align-items:center;}-->
+    <!--.navbar-brand>img{padding:7px 14px;}-->
+    <!--.menu-item{font-family:"Montserrat", sans-serif;font-style:normal;font-weight:normal;font-size:18px;line-height:100%;color:#4F4F4F !important;mix-blend-mode:normal;}-->
+    <!--.bot-btn{color:#2F80ED !important;border:1px solid #2F80ED;border-radius:4px;margin:7px;padding:12px 23px !important;transition-duration:0.2s;}-->
+    <!--.bot-btn:hover{background-color:#2F80ED !important;color:#FFF !important;transition-duration:0.5s;text-decoration:none;}-->
+    <!--.logo{width:64px !important;}-->
+    <!--#middle{font-family:"Montserrat";font-style:normal;font-weight:normal;font-size:48px;line-height:100%;letter-spacing:0.0166px;color:#4F4F4F;mix-blend-mode:normal;text-align:center;width:100%;}-->
+    <!--.slide-1{width:100%;min-height:88vh;padding-top:15%;display:block;float:left;}-->
+    <!--.bot-emoji{height:55px;padding-bottom:12px;}-->
+  <!--</style>-->
 </head>
 <body>
   <header class="header">
@@ -31,15 +31,10 @@
         <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container-fluid">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
               <a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" alt="BotsCrew logo"><span class="menu-item">BotsCrew</span></a>
+              <a href="#" class="menu-item bot-btn white contact">Contact</a>
             </div>
-            <div id="#navbar" class="navbar-collapse collapse">
+            <div id="#navbar" class="navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#" class="menu-item">Introduction</a></li>
                 <li><a href="#" class="menu-item">Blog</a></li>
@@ -61,16 +56,16 @@
         <h1>We are awesome chatbots</h1>
         <h1>development crew <img src="img/bot_emoji.png" class="bot-emoji hidden-xs"></h1>
         <br>
-        <a href="" class="menu-item bot-btn">&#9658 Watch video</a>
+        <a href="" class="menu-item bot-btn white video-btn"><div class="play-img"></div> Watch video</a>
       </div>
 
       <div class="slide-2 container-fluid" style="padding: 0;">
-        <div class="cos-xs-12 col-lg-5 bot-preview-block">
-          <div class="col-lg-3"></div>
-          <img src="img/iphone_image.png" class="iphone-image col-xs-6 col-sm-3 col-md-4 col-lg-6" style="max-height: inherit">
-          <div class="col-lg-3"></div>
+        <div class="cos-xs-12 col-sm-6 col-md-6 col-lg-5 bot-preview-block">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+          <img src="img/iphone_image.png" class="iphone-image col-xs-5 col-sm-7 col-md-6 col-lg-6" style="max-height: inherit">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
         </div>
-        <div class="col-lg-7">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7">
           <div class="description">
             <h2 class="title">What are chatbots?</h2>
             <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms. These Chatbots are intuitive to use and can be implemented into several fields of business such as e-commerce, entertainment, news, customer support, delivery services or corporate information exchange.</p>
@@ -85,11 +80,11 @@
           <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
         </div>
         <div class="col-lg-6">
-          <ul class="advantages-list">
-            <img src="img/check_icon.png" class="check-icon"><li>You have a business or want to have one. But you have a simple aim - get as many customers as possible</li>
-            <img src="img/check_icon.png" class="check-icon"><li>Make it more friendly! It’s easy! Create a chat bot and make your customer fill like he is chatting with a friend</li>
-            <img src="img/check_icon.png" class="check-icon"><li>Feel the growth! Now you have 3 billions of potential customers! How great is that? Third string, Carl!</li>
-          </ul>
+          <div class="advantages-list">
+            <img src="img/check_icon.png" class="check-icon"><p>You have a business or want to have one. But you have a simple aim - get as many customers as possible</p>
+            <img src="img/check_icon.png" class="check-icon"><p>Make it more friendly! It’s easy! Create a chat bot and make your customer fill like he is chatting with a friend</p>
+            <img src="img/check_icon.png" class="check-icon"><p>Feel the growth! Now you have 3 billions of potential customers! How great is that? Third string, Carl!</p>
+          </div>
         </div>
         <div class="col-xs-12 col-lg-6 right" style="padding: 0;">
           <p><span class="navy-blue-text">Messaging Apps</span> vs <span class="light-blue-text">Networking Apps</span></p>
@@ -126,6 +121,7 @@
             <li><a href="">E-Commerce</a></li>
             <li><a href="">Entertainment</a></li>
             <li><a href="">Concierge service</a></li>
+            <li><a href=""><img src="img/arrow.png"></a></li>
           </ul>
         </div>
       </div>
@@ -136,17 +132,17 @@
           <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
         </div>
         <div class="col-lg-1"></div>
-        <div class="col-lg-3 left">
+        <div class="col-sm-3 col-md-4 col-lg-3 left">
           <img src="img/ai_and_nlp.png">
           <p class="using-description-title"><b>AI and NLP</b></p>
           <p class="using-description">We are using wit.ai and api.ai for human text  and  voice speech understanding</p>
         </div>
-        <div class="col-lg-4 center">
+        <div class="col-sm-6 col-md-4 col-lg-4 center">
           <img src="img/platform.png">
           <p class="using-description-title"><b>Diversity of platforms</b></p>
           <p class="using-description">We are using wit.ai and api.ai for human text  and  voice speech understanding</p>
         </div>
-        <div class="col-lg-3 right">
+        <div class="col-sm-3 col-md-4 col-lg-3 right">
           <img src="img/ux.png">
           <p class="using-description-title"><b>Friendly UX</b></p>
           <p class="using-description">We are using wit.ai and api.ai for human text  and  voice speech understanding</p>
