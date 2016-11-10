@@ -1014,14 +1014,10 @@ select {
         min-height: 50vh;
     }
 
-    .slide-2 {
-        height: 100%;
-    }
-
     .slide-2 p {
         width: 95%;
     }
-    .slide-2 h2.title {
+    .slide-2 h2 {
         margin-left: -3%;
     }
     .slide-2 .description {
@@ -1029,7 +1025,7 @@ select {
         margin-bottom: 50px;
     }
     .slide-2, .slide-2 .bot-preview-block, .slide-2 .col-lg-7 {
-        min-height: 72vh;
+        min-height: 80vh;
     }
 
     .slide-2 .col-xs-12.col-sm-6.col-md-6.col-lg-7 {
