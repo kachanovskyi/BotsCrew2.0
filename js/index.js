@@ -1,8 +1,8 @@
 //progress bar
 var bar = new ProgressBar.Line('#progressbar-container', {
     strokeWidth: 1,
-    easing: 'easeInOut',
-    duration: 20000,
+    // easing: 'easeInOut',
+    duration: 10000,
     color: '#2F80ED',
     trailColor: '#DFDFDF',
     trailWidth: 6,
