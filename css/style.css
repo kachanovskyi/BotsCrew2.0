@@ -1036,6 +1036,10 @@ select {
 
 
 @media (max-width: 575px) {
+    .bot-btn.select {
+        padding: 14px 127px !important;
+    }
+
     .navbar-default .navbar-nav>li {
         width: 24%;
         display: inline-block;
@@ -1067,22 +1071,22 @@ select {
         padding: 0;
     }
 
+    .slide-1 {
+        margin-top: 40%;
+        min-height: 50vh;
+    }
+
     .slide-2 .bot-btn {
         position: absolute;
         left: 50%;
         transform: translate(-55%, 0);
     }
 
-    .slide-1 {
-        margin-top: 40%;
-        min-height: 50vh;
-    }
-
     .slide-2 p {
         width: 95%;
     }
     .slide-2 h2 {
-        margin-left: -3%;
+        margin-left: 0;
     }
     .slide-2 .description {
         transform: translate(5%, 5%);
