@@ -3,7 +3,6 @@ $(document).ready(function () {
     var lastScrollTop = 0;
     var delta = 5;
     var navbarHeight = $('.navbar-fixed-top').outerHeight();
-    console.log(navbarHeight);
 
     $(window).scroll(function(event){
         didScroll = true;
@@ -53,7 +52,7 @@ $(document).ready(function () {
             var div = document.createElement('div');
             div.className = "phrase-box " + phrases[i].type;
             div.innerHTML = phrases[i].phrase;
-            $(div).appendTo(example).fadeOut("fast");
+            $(div).appendTo(example).fadeOut(0);
             setTimeout(removeFirstElement.bind(null, example.children()[i]), 1000 * (i+1));
         }
     };
@@ -82,9 +81,19 @@ $(document).ready(function () {
     var progressBarInit = function () {
         addMessages(phrases);
         bar.animate(1.0, function() {
+            var messagesLength = $('.bot-example').children().length;
+            var timePerMessage = 3000 / messagesLength;
+            console.log(timePerMessage);
+            for (i = 0; i < messagesLength; i++) {
+                setTimeout(function () {
+                    var example = $('.bot-example');
+                    var child = example.children()[0];
+                    example.find('div').eq(0).remove();
+                }, i * timePerMessage);
+                console.log($('.bot-example').children(), 'children');
+            }
             bar.animate(0.0, {duration: 3000}, function () {
                 progressBarInit();
-
             });
         });
     };
