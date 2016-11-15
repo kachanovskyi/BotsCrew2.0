@@ -53,7 +53,7 @@ $(document).ready(function () {
             div.className = "phrase-box " + phrases[i].type;
             div.innerHTML = phrases[i].phrase;
             $(div).appendTo(example).fadeOut(0);
-            setTimeout(removeFirstElement.bind(null, example.children()[i]), 1000 * (i+1));
+            setTimeout(removeFirstElement.bind(null, example.children()[i]), 1000 * (i));
         }
     };
 
@@ -71,7 +71,7 @@ $(document).ready(function () {
     var bar = new ProgressBar.Line('#progressbar-container', {
         strokeWidth: 1,
         // easing: 'easeInOut',
-        duration: 9000,
+        duration: 8000,
         color: '#2F80ED',
         trailColor: '#DFDFDF',
         trailWidth: 6,
@@ -83,19 +83,22 @@ $(document).ready(function () {
         bar.animate(1.0, function() {
             var messagesLength = $('.bot-example').children().length;
             var timePerMessage = 3000 / messagesLength;
-            console.log(timePerMessage);
             for (i = 0; i < messagesLength; i++) {
                 setTimeout(function () {
                     var example = $('.bot-example');
                     var child = example.children()[0];
                     example.find('div').eq(0).remove();
                 }, i * timePerMessage);
-                console.log($('.bot-example').children(), 'children');
             }
             bar.animate(0.0, {duration: 3000}, function () {
                 progressBarInit();
             });
         });
     };
-    progressBarInit();
+    var targetOffset = $('.slide-4').offset().top;
+    var $w = $(window).scroll(function(){
+        if ( $w.scrollTop() > targetOffset ) {
+            progressBarInit();
+        }
+    });
 });
