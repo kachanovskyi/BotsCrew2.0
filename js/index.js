@@ -95,10 +95,10 @@ $(document).ready(function () {
             });
         });
     };
-    var targetOffset = $('.slide-4').offset().top;
-    var $w = $(window).scroll(function(){
-        if ( $w.scrollTop() > targetOffset ) {
-            progressBarInit();
-        }
-    });
+    // var targetOffset = $('.slide-4').offset().top;
+    // var $w = $(window).scroll(function(){
+    //     if ( $w.scrollTop() > targetOffset ) {
+    //         progressBarInit();
+    //     }
+    // });
 });

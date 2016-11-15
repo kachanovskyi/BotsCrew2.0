@@ -55,7 +55,7 @@
 }
 
 .menu-item.bot-btn.blue-dark-blue.messenger {
-    margin-right:70px;
+    margin-right:18%;
 }
 
 .slide-2 {
@@ -135,6 +135,11 @@
     margin: 10px auto;
 }
 
+.slide-3 .right {
+    margin: 0;
+    margin-top: 50px;
+}
+
 .slide-3 .advantages-list {
     width: 70%;
     font-size: 18px;
@@ -155,11 +160,6 @@
     width: 100%;
     height: 400px;
     /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
-}
-
-.slide-3 .right {
-    margin: 0;
-    margin-top: 50px;
 }
 
 .slide-3 .right p {
@@ -312,6 +312,7 @@
     width: 100%;
     min-height: 72vh;
     border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 20px;
 }
 
 .slide-5 p {
@@ -350,14 +351,6 @@
 
 .slide-5 .using-description-title {
     margin-top: 30px;
-}
-
-.slide-5 .left {
-    padding-left: 6%;
-}
-
-.slide-5 .right {
-    padding-right: 6%;
 }
 
 .slide-5 .center {
@@ -488,9 +481,9 @@
 .slide-7 .content .customer p {
     padding: 0;
 }
-.slide-7 .content .customer>p {
-    padding-top: 8px;
-}
+/*.slide-7 .content .customer>p {*/
+    /*padding-top: 8px;*/
+/*}*/
 
 .slide-8 {
     width: 100%;
@@ -499,9 +492,6 @@
     float: left;
 }
 
-.slide-8 .pricing {
-    padding: 0;
-}
 .slide-8 .pricing .block {
     background: #FFFFFF;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
@@ -554,6 +544,7 @@
     line-height: 130%;
     letter-spacing: 0.0166px;
     color: #828282;
+    min-height: 161px;
 }
 .slide-8 .pricing.center .block .middle-subblock p {
     padding-top: 10px;
@@ -571,6 +562,11 @@
 
 .slide-8 .pricing.center {
     z-index: 2;
+    text-align: center;
+}
+
+.slide-8 .pricing.center .block .top-subblock p {
+    margin: 20px auto;
 }
 
 .slide-8 .top {
@@ -582,7 +578,7 @@
     margin-bottom: 20px;
 }
 
-.slide-8 h2 {
+.slide-8 .middle h2 {
     font-size: 28px;
     line-height: 100%;
     color: #FFFFFF;
@@ -768,8 +764,18 @@ select {
     margin: 20px auto;
 }
 
+@media (max-width: 1311px) {
+    .bot-btn.select {
+        padding: 15px 155px !important;
+    }
+    .bot-btn.select-side {
+        padding: 15px 111px !important;
+    }
+}
 
+@media (min-width: 1200px) {
 
+}
 @media (max-width: 1199px) {
     .navbar-brand {
         padding-left: 50px;
@@ -785,6 +791,24 @@ select {
     }
     .slide-4 .bottom ul>li:nth-child(2), .slide-4 .bottom ul>li:nth-child(6) {
         padding: 10px 0;
+    }
+
+    .slide-3 .advantages-list {
+        margin-top: 40px;
+    }
+
+    .bot-btn.select {
+        padding: 15px 133px !important;
+    }
+    .bot-btn.select-side {
+        padding: 15px 99px !important;
+    }
+
+    .slide-3 .graphic-img {
+        width: 100%;
+        height: 400px;
+        width: 77%;
+        /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
     }
 }
 
@@ -819,7 +843,6 @@ select {
 }
 
 @media (min-width: 992px) {
-
 }
 @media (max-width: 991px) {
     .navbar-brand {
@@ -839,10 +862,22 @@ select {
     .navbar-header .bot-btn.white-blue.contact {
         display: none;
     }
+
+    .slide-5 .left {
+        padding-left: 6%;
+    }
+
+    .slide-5 .right {
+        padding-right: 6%;
+    }
+
+    .slide-8 .pricing {
+        padding: 0;
+    }
 }
 @media (max-width: 767px) {
     .navbar-nav {
-        padding: 33px 24px 14px 24px;
+        padding: 23px 24px 0 24px;
     }
     .navbar-header .navbar-brand {
         margin: 18px 0 18px 20px;
@@ -897,7 +932,7 @@ select {
     }
 
     .slide-2, .slide-2 .bot-preview-block, .slide-2 .col-lg-7 {
-        min-height: 95vh;
+        /*min-height: 95vh;*/
     }
 
     .slide-2 .bot-btn {
@@ -962,12 +997,16 @@ select {
     .slide-4 .bottom ul>li:last-child {
         width: 10%;
     }
+
+    .slide-5 .left, .slide-5 .center, .slide-5 .right {
+        margin-top: 20px;
+    }
 }
 
 
 @media (max-width: 575px) {
-    .bot-btn.select {
-        padding: 14px 127px !important;
+    .bot-btn.select, .bot-btn.select-side {
+        padding: 14px 144px !important;
     }
 
     .navbar-default .navbar-nav>li {
@@ -1129,16 +1168,16 @@ select {
     }
 
     .slide-7 .content .customer p {
-        padding: 0 18px;
+        /*padding: 0 18px;*/
     }
 
-    .slide-8 .top {
+    .slide-8 .top>h2 {
         text-align: left;
         padding-left: 20px;
     }
-    .slide-8 .top p {
+    .slide-8 .top>p {
         width: 92%;
-        margin-left: 0;
+        margin-left: 20px;
     }
 
     .slide-8 .middle p {
@@ -1181,6 +1220,10 @@ select {
     .slide-3 .graphic-img {
         height: 180px;
         margin-top: 20px;
+    }
+
+    .bot-btn.select, .bot-btn.select-side {
+        padding: 14px 100px !important;
     }
 }
 
