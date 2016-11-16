@@ -9,7 +9,7 @@
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <style>
-    body{width:100%;overflow-x:hidden}h1,h2,p,a{font-family:"Montserrat",sans-serif;font-style:normal;font-weight:400;mix-blend-mode:normal}a,a:hover,a:visited,a:active{text-decoration:none!important}.header{width:100%;height:12vh}.nav-up{top:-201px}.navbar{padding-top:0!important;border:none;background-color:#FFF;transition:top .3s ease-in-out}.navbar-nav{margin-top:0;margin-bottom:0;padding:24px}.navbar-nav>li:last-child{padding-right:100px}.navbar-default{border-color:#E5E5E5;border-bottom:1px solid #E5E5E5}.navbar-brand{padding:0;display:flex;align-items:center;padding-left:100px;margin:24px 0}.navbar-brand>img{height:50px;padding:7px 14px;width:auto}.menu-item{font-family:"Montserrat",sans-serif;font-size:18px;line-height:100%;color:#4F4F4F!important}.bot-btn{border:1px solid #2F80ED;border-radius:4px;transition-duration:.2s;padding:14px 23px}.bot-btn:hover{transition-duration:.5s;text-decoration:none}.bot-btn:active{box-shadow:0 10px 20px rgba(0,0,0,0.1),inset 0 4px 0 rgba(0,0,0,0.05)}.bot-btn.white-blue{color:#2F80ED!important}.bot-btn.white-blue:hover{background-color:#2F80ED!important;color:#FFF!important}.logo{width:64px!important}.play-img{display:inline-block;background:url(img/play.png);background-size:cover;width:14px;height:16px;margin-bottom:-1px;transition-duration:.2s}#middle{font-size:48px;line-height:100%;letter-spacing:.0166px;color:#4F4F4F;text-align:center;width:100%}.slide-1{width:100%;min-height:88vh;padding-top:15%;display:block;float:left}.bot-emoji{height:55px;padding-bottom:12px}
+    body{width:100%;overflow-x:hidden}h1,h2,p,a{font-family:"Montserrat",sans-serif;font-style:normal;font-weight:400;mix-blend-mode:normal}a,a:hover,a:visited,a:active{text-decoration:none!important}.header{width:100%;height:12vh}.nav-up{top:-201px}.navbar{padding-top:0!important;border:none;background-color:#FFF;transition:top .3s ease-in-out}.navbar-nav{margin-top:0;margin-bottom:0;padding:24px}.navbar-nav>li:last-child{padding-right:100px}.navbar-default{border-color:#E5E5E5;border-bottom:1px solid #E5E5E5}.navbar-brand{padding:0;display:flex;align-items:center;padding-left:100px;margin:24px 0}.navbar-brand>img{height:50px;padding:7px 14px;width:auto}.menu-item{font-family:"Montserrat",sans-serif;font-size:18px;line-height:100%;color:#4F4F4F!important}.bot-btn{border:1px solid #2F80ED;border-radius:4px;transition-duration:.2s;padding:14px 23px}.bot-btn:hover{transition-duration:.5s;text-decoration:none}.bot-btn:active{box-shadow:0 10px 20px rgba(0,0,0,0.1),inset 0 4px 0 rgba(0,0,0,0.05)}.bot-btn.white-blue{color:#2F80ED!important}.bot-btn.white-blue:hover{background-color:#2F80ED!important;color:#FFF!important}.logo{width:64px!important}.play-img{display:inline-block;background:url(img/play.svg);background-size:cover;width:14px;height:16px;margin-bottom:-1px;transition-duration:.2s}#middle{font-size:48px;line-height:100%;letter-spacing:.0166px;color:#4F4F4F;text-align:center;width:100%}.slide-1{width:100%;min-height:88vh;padding-top:15%;display:block;float:left}.bot-emoji{height:55px;padding-bottom:12px}
   </style>
 </head>
 <body>
@@ -41,47 +41,53 @@
   <section id="wrapper">
     <div id="middle">
       <div class="slide-1 container-fluid">
-        <h1>We are awesome chatbots</h1>
-        <h1>development crew <img src="img/bot_emoji.png" class="bot-emoji hidden-xs"></h1>
+        <h1 class="first">We are awesome chatbots</h1>
+        <h1 class="second">development crew <img src="img/bot_emoji.png" class="bot-emoji hidden-xs"></h1>
         <br>
         <a href="" class="menu-item bot-btn white-blue"><div class="play-img"></div> Watch video</a>
       </div>
 
-      <div class="slide-2 container-fluid" style="padding: 0;">
-        <div class="cos-xs-12 col-sm-6 col-md-6 col-lg-5 bot-preview-block">
-          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
-          <img src="img/iphone_image.png" class="iphone-image col-xs-6 col-sm-7 col-md-6 col-lg-6" style="max-height: inherit">
-          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7">
-          <div class="description">
-            <h2>What are chatbots?</h2>
-            <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms. These Chatbots are intuitive to use and can be implemented into several fields of business such as e-commerce, entertainment, news, customer support, delivery services or corporate information exchange.</p>
-            <a href="#" class="menu-item bot-btn white-blue">Discover our bots</a>
+      <div class="slide-2 container-fluid" >
+        <div class="row">
+          <div class="content">
+            <div class="cos-xs-12 col-sm-5 col-md-5 col-lg-5 bot-preview-block">
+              <img src="img/iphone_image.png" class="iphone-image col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 right">
+              <div class="description col-xs-offset-1 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-xs-10 col-sm-8 col-md-8 col-lg-8">
+                <h2>What are chatbots?</h2>
+                <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms. These Chatbots are intuitive to use and can be implemented into several fields of business such as e-commerce, entertainment, news, customer support, delivery services or corporate information exchange.</p>
+                <a href="#" class="menu-item bot-btn white-blue">Discover our bots</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="slide-3 container-fluid">
-        <div class="top">
-          <h2>Chatbots are the new black</h2>
-          <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
-        </div>
-        <div class="col-lg-6">
-          <div class="advantages-list">
-            <img src="img/check_icon.svg" class="check-icon"><p>You have a business or want to have one. But you have a simple aim - get as many customers as possible</p>
-            <img src="img/check_icon.svg" class="check-icon"><p>Make it more friendly! It’s easy! Create a chat bot and make your customer fill like he is chatting with a friend</p>
-            <img src="img/check_icon.svg" class="check-icon"><p>Feel the growth! Now you have 3 billions of potential customers! How great is that? Third string, Carl!</p>
+        <div class="row">
+          <div class="top col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+            <h2 class="text-center">Chatbots are the new black</h2>
+            <p class="text-center">A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
           </div>
         </div>
-        <div class="col-xs-12 col-lg-6 right" style="padding: 0;">
-          <p><span class="navy-blue-text">Messaging Apps</span> vs <span class="light-blue-text">Networking Apps</span></p>
-          <p>Statistics from Buffer and Business Insider</p>
-          <img src="img/graphic.png" class="graphic-img">
+        <div class="row">
+          <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-1 col-md-5 col-lg-offset-1 col-lg-5">
+            <ul class="advantages-list">
+              <li>You have a business or want to have one. But you have a simple aim - get as many customers as possible</li>
+              <li>Make it more friendly! It’s easy! Create a chat bot and make your customer fill like he is chatting with a friend</li>
+              <li>Feel the growth! Now you have 3 billions of potential customers! How great is that? Third string, Carl!</li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 right">
+            <p><span class="navy-blue-text">Messaging Apps</span> vs <span class="light-blue-text">Networking Apps</span></p>
+            <p>Statistics from Buffer and Business Insider</p>
+            <img src="img/graphic.png" class="graphic-img">
+          </div>
         </div>
       </div>
 
-      <div class="slide-4">
+      <div class="slide-4 container-fluid nopadding">
         <div class="top">
           <h2>Where you can use chatbots</h2>
           <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
@@ -90,36 +96,28 @@
           <div class="carousel-inner" role="listbox">
             <div class="item active">
               <div class="col-lg-6 left">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-10">
+                <div class="col-lg-offset-2 col-lg-10">
                   <h2>Effective title string</h2>
                   <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms. These Chatbots are intuitive to use and can be implemented into several fields of business such as e-commerce, entertainment, news, customer support, delivery services or corporate information exchange.</p>
                 </div>
-                <div class="col-lg-2"></div>
               </div>
               <div class="col-lg-6 right">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8 bot-example">
+                <div class="col-lg-offset-2 col-lg-8 bot-example">
                   <!--<img src="img/chat.png">-->
                 </div>
-                <div class="col-lg-2"></div>
               </div>
             </div>
             <div class="item">
               <div class="col-lg-6 left">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-10">
+                <div class="col-lg-offset-2 col-lg-10">
                   <h2>Effective string</h2>
                   <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms. These Chatbots are intuitive to use and can be implemented into several fields of business such as e-commerce, entertainment, news, customer support, delivery services or corporate information exchange.</p>
                 </div>
-                <div class="col-lg-2"></div>
               </div>
               <div class="col-lg-6 right">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8 bot-example">
+                <div class="col-lg-offset-2 col-lg-8 bot-example">
                   <!--<img src="img/chat.png">-->
                 </div>
-                <div class="col-lg-2"></div>
               </div>
             </div>
           </div>
@@ -140,56 +138,63 @@
         </div>
       </div>
 
-      <div class="slide-5">
-        <div class="top">
-          <h2>What do we do</h2>
-          <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
+      <div class="slide-5 container-fluid">
+        <div class="row">
+          <div class="top">
+            <h2>What do we do</h2>
+            <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
+          </div>
         </div>
         <!--<div class="col-lg-1"></div>-->
         <div class="col-sm-3 col-md-4 col-lg-4 left">
-          <img src="img/ai_and_nlp.svg">
+          <div class="we-do-img">
+            <img src="img/ai_and_nlp.svg">
+          </div>
           <p class="using-description-title"><b>AI and NLP</b></p>
           <p class="using-description">We are using wit.ai and api.ai for human text  and  voice speech understanding</p>
         </div>
         <div class="col-sm-6 col-md-4 col-lg-4 center">
-          <img src="img/platform.svg">
+          <div class="we-do-img">
+            <img src="img/platform.svg">
+          </div>
           <p class="using-description-title"><b>Diversity of platforms</b></p>
           <p class="using-description">We are using wit.ai and api.ai for human text  and  voice speech understanding</p>
         </div>
         <div class="col-sm-3 col-md-4 col-lg-4 right">
-          <img src="img/ux.svg">
+          <div class="we-do-img">
+            <img src="img/ux.svg">
+          </div>
           <p class="using-description-title"><b>Friendly UX</b></p>
           <p class="using-description">We are using wit.ai and api.ai for human text  and  voice speech understanding</p>
         </div>
         <!--<div class="col-lg-1"></div>-->
       </div>
 
-      <div class="slide-6">
+      <div class="slide-6 container-fluid">
         <div class="top">
-          <h2>We're proud of our bots</h2>
+          <h2 class="text-center">We're proud of our bots</h2>
           <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
         </div>
-        <div class="col-lg-2"></div>
-        <div class="col-lg-1">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-offset-1 col-lg-1">
           <a class="left" href="#carouselBotCard" role="button" data-slide="prev">
             <img src="img/prev.svg" class="carousel-control">
             <span class="sr-only">Previous</span>
           </a>
         </div>
-        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-6">
+        <div class="col-xs-8 col-sm-offset-1 col-sm-6 col-md-offset-1 col-md-6 col-lg-offset-1 col-lg-6">
           <div id="carouselBotCard" class="carousel slide" data-ride="carousel">
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
               <div class="item active">
                 <div class="bot-card">
                   <div class="row">
-                    <div class="col-lg-5" style="">
-                      <img src="img/musement.png">
-                    </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 col-lg-push-5 musement">
                       <h2>Musement</h2>
                       <p class="description">Travel Assistant for activities, tours, attractions, tickets, city passes and more. Musement helps travellers get the best from destinations by providing a great choice of local tours and attractions bookable on multiple devices. </p>
                       <a href="#" class="menu-item bot-btn blue-dark-blue messenger"><img src="img/messenger_icon.svg" class="fb-messenger-img"> Open in messenger</a>
+                    </div>
+                    <div class="col-lg-5 col-lg-pull-7 musement">
+                      <img src="img/musement.png">
                     </div>
                   </div>
                 </div>
@@ -198,67 +203,93 @@
             <!-- /Wrapper for slides -->
           </div>
         </div>
-        <div class="col-lg-1">
+        <div class="col-xs-offset-1 col-xs-1 col-lg-offset-1 col-lg-1">
           <a class="right" href="#carouselBotCard" role="button" data-slide="next">
             <img src="img/next.svg" class="carousel-control">
             <span class="sr-only">Next</span>
           </a>
         </div>
-        <div class="col-lg-2"></div>
+        <!--<div class="col-lg-2"></div>-->
       </div>
 
-      <div class="slide-7">
-        <div class="top">
-          <h2>You’re in good company</h2>
-          <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
-        </div>
-        <div class="col-lg-1"></div>
-        <div class="col-lg-10">
-          <img src="img/netflix.svg" class="brand-img">
-          <img src="img/open_table.svg" class="brand-img">
-          <img src="img/nike.svg" class="brand-img">
-          <img src="img/mastercard.svg" class="brand-img" id="mastercard">
-          <img src="img/walmart.svg" class="brand-img">
-
-          <div class="content">
-            <div class="col-lg-4">
-              <img src="img/video1_preview.png" class="video-preview-img left">
-              <p>“When you give everyone a voice and give people power, the system usually ends up in a really good place. So, what we view our role as, is giving people that power”</p>
-              <div class="customer">
-                <img src="img/customer1.png" class="customer-img first">
-                <p class="customer-title"><b>Mark Zuckerberg</b></p>
-                <p>CEO of Facebook</p>
-              </div>
+      <div class="slide-7 container-fluid nopadding">
+          <div class="row">
+            <div class="top">
+              <h2>You’re in good company</h2>
+              <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
             </div>
-            <div class="col-lg-4">
-              <img src="img/video2_preview.png" class="video-preview-img">
-              <p>“I've thought about it quite a lot ... We could definitely make a flying car – but that's not the hard part ... The hard part is, how do you make a flying car that's super safe and quiet?”</p>
-              <div class="customer">
-                <img src="img/customer2.png" class="customer-img">
-                <p class="customer-title"><b>Elon Musk</b></p>
-                <p>CEO of Tesla Motors</p>
-              </div>
+          </div>
+          <div class="row">
+            <div class="brand-img smaller col-xs-4 col-sm-4 col-md-offset-1 col-md-2 col-lg-offset-1 col-lg-2">
+              <img src="img/netflix.svg">
             </div>
-            <div class="col-lg-4">
-              <img src="img/video3_preview.png" class="video-preview-img right">
-              <p>“There are half a billion people that listen to music online and the vast majority are doing so illegally. But if we bring those people over to the legal side of our service...”</p>
-              <div class="customer">
-                <img src="img/customer3.png" class="customer-img">
-                <p class="customer-title"><b>Daniel Ek</b></p>
-                <p>CEO of Spotify</p>
+            <div class="brand-img smaller col-xs-4 col-sm-4 col-md-2 col-lg-2">
+              <img src="img/open_table.svg">
+            </div>
+            <div class="brand-img smaller col-xs-4 col-sm-4 col-md-2 col-lg-2">
+            <img src="img/nike.svg">
+            </div>
+            <div class="brand-img col-xs-4 col-sm-4 col-md-2 col-lg-2">
+              <img src="img/mastercard.svg">
+            </div>
+            <div class="brand-img last col-xs-4 col-sm-4 col-md-2 col-lg-2">
+              <img src="img/walmart.svg">
+            </div>
+          </div>
+          <div class="row">
+            <div class="content col-lg-offset-1 col-lg-10">
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <img src="img/video1_preview.png" class="video-preview-img left">
+                <p>“When you give everyone a voice and give people power, the system usually ends up in a really good place. So, what we view our role as, is giving people that power”</p>
+                <div class="customer">
+                  <img src="img/customer1.png" class="customer-img first">
+                  <p class="customer-title"><b>Mark Zuckerberg</b></p>
+                  <p>CEO of Facebook</p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <img src="img/video2_preview.png" class="video-preview-img">
+                <p>“I've thought about it quite a lot ... We could definitely make a flying car – but that's not the hard part ... The hard part is, how do you make a flying car that's super safe and quiet?”</p>
+                <div class="customer">
+                  <img src="img/customer2.png" class="customer-img">
+                  <p class="customer-title"><b>Elon Musk</b></p>
+                  <p>CEO of Tesla Motors</p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <img src="img/video3_preview.png" class="video-preview-img right">
+                <p>“There are half a billion people that listen to music online and the vast majority are doing so illegally. But if we bring those people over to the legal side of our service...”</p>
+                <div class="customer">
+                  <img src="img/customer3.png" class="customer-img">
+                  <p class="customer-title"><b>Daniel Ek</b></p>
+                  <p>CEO of Spotify</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-1"></div>
       </div>
 
-      <div class="slide-8">
+      <div class="slide-8 container-fluid nopadding">
         <div class="top">
-          <h2>How much does it cost?</h2>
-          <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
-          <div class="col-md-1 col-lg-1"></div>
-          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pricing">
+          <h2 class="text-center">How much does it cost?</h2>
+          <p class="text-center">A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
+          <div class="col-xs-12 col-sm-4 col-sm-push-4 col-md-offset-1 col-md-4 col-md-push-3 col-lg-offset-1 col-lg-4 col-lg-push-3 pricing center">
+            <div class="block">
+              <p class="title"><b>Enterprise</b></p>
+              <div class="top-subblock">
+                <p>Custom price</p>
+              </div>
+              <div class="middle-subblock">
+                <p>Fully customized chatbot with a strong NLP skills, working with third party API`s with analytics, admin panel etc. Developed with a chatbot builder prototype bot just to check the conversion. It does not include any NLP</p>
+              </div>
+              <div class="bottom-subblock">
+                <a href="#" class="menu-item bot-btn blue-dark-blue select">Select</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 col-sm-pull-4 col-md-3 col-md-pull-4 col-lg-3 col-lg-pull-4 pricing">
             <div class="block">
               <p class="title"><b>Prototype</b></p>
               <div class="top-subblock">
@@ -273,21 +304,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pricing center">
-            <div class="block">
-              <p class="title"><b>Enterprise</b></p>
-              <div class="top-subblock">
-                <p>Custom price</p>
-              </div>
-              <div class="middle-subblock">
-                <p>Fully customized chatbot with a strong NLP skills, working with third party API`s with analytics, admin panel etc. Developed with a chatbot builder prototype bot just to check the conversion. It does not include any NLP</p>
-              </div>
-              <div class="bottom-subblock">
-                <a href="#" class="menu-item bot-btn blue-dark-blue select">Select</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pricing">
+
+          <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 pricing">
             <div class="block">
               <p class="title"><b>Startup</b></p>
               <div class="top-subblock">
@@ -302,12 +320,14 @@
               </div>
             </div>
           </div>
-          <div class="col-md-1 col-lg-1"></div>
         </div>
-        <div class="middle">
-          <h2>Ready to get own bot?</h2>
-          <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
-          <a href="#" class="menu-item bot-btn white-snow">Get Started</a>
+
+        <div class="row">
+          <div class="middle">
+            <h2 class="text-center">Ready to get own bot?</h2>
+            <p class="text-center">A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
+            <a href="#" class="menu-item bot-btn white-snow">Get Started</a>
+          </div>
         </div>
         <div class="bottom">
           <p>Not sure what kind of experts would be best for your project?</p>
@@ -317,7 +337,7 @@
 
       <div class="slide-9">
         <div class="top"></div>
-        <div class="middle">
+        <div class="middle text-center">
           <h2>Meet our team</h2>
           <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
           <a href="#" class="menu-item bot-btn blue-dark-blue">Join our team</a>
@@ -332,7 +352,7 @@
         </div>
       </div>
 
-      <div class="slide-10">
+      <div class="slide-10 container-fluid text-center">
         <div class="top">
           <h2>Drop us a line</h2>
           <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
