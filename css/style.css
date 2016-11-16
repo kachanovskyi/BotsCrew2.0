@@ -933,6 +933,10 @@ select {
     .menu-item.bot-btn.blue-dark-blue.messenger {
         margin-right:16%;
     }
+
+    #carouselBotCard {
+        padding-top: 30px;
+    }
 }
 @media (max-width: 767px) {
     .slide-1 {
@@ -1060,6 +1064,10 @@ select {
 
     .slide-6 .col-lg-1>a .carousel-control {
         margin-top: 575px;
+    }
+
+    .slide-6 .top {
+        text-align: left;
     }
 }
 
@@ -1212,9 +1220,6 @@ select {
         margin-bottom: 20px;
     }
 
-    .slide-6 .top {
-        text-align: left;
-    }
     .slide-6 .top h2 {
         margin-top: 33px;
         margin-left: 20px;
