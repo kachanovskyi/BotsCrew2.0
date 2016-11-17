@@ -101,4 +101,54 @@ $(document).ready(function () {
     //         progressBarInit();
     //     }
     // });
+
+
+    var listElem = $('.slide-4 .bottom ul>li');
+    var displayAmount = 0;
+    var firstDisplayed = 0;
+    $(window).on('resize', function(){
+        listElem = $('.slide-4 .bottom ul>li');
+        displayAmount = 0;
+        firstDisplayed = 0;
+        for (var i = 0; i < listElem.length - 1; i++) {
+            if($(listElem[i]).css('display') === 'block') {
+                displayAmount++;
+                console.log(displayAmount, 'displayAmount');
+            }
+        }
+    });
+
+    var listScrollNext = function () {
+        var elemFound = false;
+
+        // console.log(listElem.length, 'lenght');
+        // console.log($($('.slide-4 .bottom ul>li')[0]).css('display'));
+        if((firstDisplayed + displayAmount) === (listElem.length - 1)) {
+            for(i = 0; i < displayAmount; i++) {
+                $(listElem[i]).css('display', 'block');
+                firstDisplayed = 0;
+                console.log('displayed new');
+            }
+            for(i = displayAmount; i < listElem.length - 1; i++) {
+                $(listElem[i]).css('display', 'none');
+            }
+        } else {
+            for (i = 0; i < listElem.length - 1; i++) {
+                if($(listElem[i]).css('display') === 'block') {
+                    firstDisplayed = i;
+                    console.log(firstDisplayed, 'firstDisplayed');
+                    break;
+                }
+            }
+            $(listElem[i]).css('display', 'none');
+            $(listElem[i + displayAmount]).css('display', 'block');
+        }
+        return false;
+    };
+    // listScrollNext();
+    $('#listScrollNext').click(function (e) {
+        console.log('worked');
+        listScrollNext();
+        return false;
+    })
 });
