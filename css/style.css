@@ -451,7 +451,7 @@
 .slide-7 {
     display: block;
     float: left;
-    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
     border: 1px solid #CCCCCC;
     border-left: none;
@@ -515,7 +515,7 @@
 /*}*/
 
 .slide-8 {
-    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
     display: block;
     float: left;
