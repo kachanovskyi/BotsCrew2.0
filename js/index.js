@@ -33,6 +33,13 @@ $(document).ready(function () {
         lastScrollTop = st;
     }
 
+    function setHeight() {
+        var height = $('.slide-2 .right').outerHeight();
+        $('.slide-2 .bot-preview-block').height(height);
+    }
+    setHeight();
+    $(window).resize(setHeight);
+
 
     //.bot-example scripts
     var phrases = [
@@ -106,7 +113,10 @@ $(document).ready(function () {
     var listElem = $('.slide-4 .bottom ul>li');
     var displayAmount = 0;
     var firstDisplayed = 0;
-    $(window).on('resize', function(){
+    // console.log(elementWidth, 'element width');
+        $(window).on('resize', function(){
+        console.log('window resized');
+        console.log(listElem.length, 'length');
         listElem = $('.slide-4 .bottom ul>li');
         displayAmount = 0;
         firstDisplayed = 0;
@@ -116,17 +126,28 @@ $(document).ready(function () {
                 console.log(displayAmount, 'displayAmount');
             }
         }
-    });
+    }());
 
     var listScrollNext = function () {
         var elemFound = false;
+        var elementWidth;
+        var lastElem = $(listElem[listElem.length - 1]);
+        // var listWidth = $(window).width() - lastElem.css('width');
+        console.log(lastElem.css('width'), 'width1');
+        console.log(lastElem.outerWidth(), 'width2');
+        console.log($(window).width(), 'window width');
 
         // console.log(listElem.length, 'lenght');
         // console.log($($('.slide-4 .bottom ul>li')[0]).css('display'));
         if((firstDisplayed + displayAmount) === (listElem.length - 1)) {
             for(i = 0; i < displayAmount; i++) {
                 $(listElem[i]).css('display', 'block');
+                $(listElem[i]).css('width', elementWidth);
                 firstDisplayed = 0;
+                elementWidth = $(listElem[0]).css('width');
+                // $(lastElem).css('width', ($(window).css('width') - displayAmount*elementWidth));
+                console.log(($(window).css('width') - ((displayAmount*elementWidth) + 'px')), 'TEST');
+                console.log($(lastElem).css('width'), 'lastElem width404');
                 console.log('displayed new');
             }
             for(i = displayAmount; i < listElem.length - 1; i++) {
@@ -136,12 +157,19 @@ $(document).ready(function () {
             for (i = 0; i < listElem.length - 1; i++) {
                 if($(listElem[i]).css('display') === 'block') {
                     firstDisplayed = i;
+                    elementWidth = $(listElem[i]).css('width');
+                    console.log(elementWidth, 'elementWidth1111');
                     console.log(firstDisplayed, 'firstDisplayed');
                     break;
                 }
             }
             $(listElem[i]).css('display', 'none');
             $(listElem[i + displayAmount]).css('display', 'block');
+            // elementWidth -=1;
+            console.log(elementWidth, "ELEMENT WIDTH");
+            $(listElem[i + displayAmount]).css('width', elementWidth);
+            console.log(i+displayAmount, 'i+displayAmount');
+            console.log($(listElem[i + displayAmount]).css('width'), 'this element width');
         }
         return false;
     };
