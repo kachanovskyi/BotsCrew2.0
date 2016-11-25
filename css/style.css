@@ -90,6 +90,8 @@
     transform: translate(-50%, 0);
     /*position: absolute;*/
     /*bottom: 0;*/
+    /*max-height: 100%;*/
+    /*width: auto;*/
 }
 
 .slide-2 .description {
@@ -113,6 +115,11 @@
     /*width: 63%;*/
     text-align: left;
     margin-top: 20px;
+}
+
+.slide-2, .slide-3 {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .slide-3 {
