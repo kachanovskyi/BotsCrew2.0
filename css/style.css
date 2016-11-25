@@ -908,6 +908,10 @@ select {
     .slide-2, .slide-2 .right, .slide-2 .bot-preview-block {
         min-height: 100vh;
     }
+
+    .slide-6 .bot-card p, .slide-6 .bot-card h2 {
+        text-align: left;
+    }
 }
 @media (max-width: 991px) {
     .navbar-brand {
@@ -1026,10 +1030,6 @@ select {
 
     .slide-8 .pricing {
         padding: 0;
-    }
-
-    .slide-6 .bot-card p, .slide-6 .bot-card h2 {
-        text-align: left;
     }
 
     .menu-item.bot-btn.blue-dark-blue.messenger {
@@ -1651,11 +1651,11 @@ select {
     }
 
     .musement {
-        margin-left: 0;
+        /*margin-left: 0;*/
     }
 
     .slide-8 .pricing {
-        padding-left: 0;
+        /*padding-left: 0;*/
     }
 
     .slide-8 .top p {
