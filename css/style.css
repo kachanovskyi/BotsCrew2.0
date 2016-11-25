@@ -36,7 +36,7 @@
     text-decoration: none;
 }
 .bot-btn:hover .play-img {
-    background: url("../img/play-white.png");
+    background: url("../img/play-white.svg");
     transition-duration: 0.5s;
     margin-bottom: -1px;
 }
@@ -1033,8 +1033,8 @@ select {
     }
 
     .menu-item.bot-btn.blue-dark-blue.messenger {
-        float: left;
-        /*margin-left: 28px;*/
+        /*float: left;*/
+        margin-bottom: 20px;
         text-align: center;
     }
 
@@ -1304,8 +1304,9 @@ select {
     }
 
     .slide-1 {
-        margin-top: 40%;
+        margin-top: 10%;
         min-height: 55vh;
+        margin-bottom: 14%;
     }
 
     .slide-2 .bot-btn {
@@ -1507,7 +1508,13 @@ select {
         margin-left: 2%;
     }
     .navbar-default .navbar-nav>li>a {
-        margin-left: 14%;
+        margin-left: 12%;
+    }
+    .navbar-default .navbar-nav>li:last-child {
+        margin-left: 10%;
+    }
+    .nav>li>a {
+        padding: 0 !important;
     }
 
     .navbar-default .navbar-nav>li>a {
