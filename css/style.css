@@ -912,6 +912,10 @@ select {
     .slide-6 .bot-card p, .slide-6 .bot-card h2 {
         text-align: left;
     }
+
+    .menu-item.bot-btn.blue-dark-blue.messenger {
+        float: left;
+    }
 }
 @media (max-width: 991px) {
     .navbar-brand {
@@ -1033,7 +1037,6 @@ select {
     }
 
     .menu-item.bot-btn.blue-dark-blue.messenger {
-        /*float: left;*/
         margin-bottom: 20px;
         text-align: center;
     }
@@ -1675,7 +1678,7 @@ select {
     }
 
     .slide-1 {
-        min-height: 58vh;
+        min-height: 66vh;
     }
 
     .slide-2 .bot-preview-block {
