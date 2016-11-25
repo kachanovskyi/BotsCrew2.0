@@ -1090,7 +1090,7 @@ select {
         display: inline-block;
         float: left;
         width: 20%;
-        margin-left: 33%;
+        margin-left: 22%;
         /*padding-right: 8%;*/
     }
 
@@ -1257,8 +1257,8 @@ select {
 
 @media (max-width: 575px) {
     .slide-6 .musement>img {
-        width: 88%;
-        margin-left: 30px;
+        width: 100%;
+        margin-left: 4%;
         height: auto;
         margin-top: 20px;
     }
@@ -1272,7 +1272,7 @@ select {
     }
 
     .navbar-default .navbar-nav>li:nth-child(2) {
-        margin-left: 6%;
+        /*margin-left: 6%;*/
     }
     .navbar-default .navbar-nav>li:last-child {
         /*margin-right: 14%;*/
@@ -1459,20 +1459,25 @@ select {
         margin: 0;
     }
     .slide-9 .bot-btn.white-blue {
+        /*display: block;*/
+        /*margin: 24px 66px;*/
+        /*padding: 14px 10px;*/
+    }
+    .slide-9 .more-about-div {
         display: block;
-        margin: 24px 66px;
+        margin: 24px 70px;
         padding: 14px 10px;
     }
     .slide-9 .bot-btn.white-blue.more-about {
-        /*padding: 14px 18px !important;*/
+        padding: 14px 18px;
         /*margin: 24px 158px;*/
-        width: 50%;
-        margin: 24px auto;
+        /*width: 50%;*/
+        /*margin: 24px auto;*/
     }
     .bot-btn.blue-dark-blue.join {
         padding: 14px;
-        width:50%;
-        margin: 24px auto;
+        /*width:50%;*/
+        /*margin: 24px auto;*/
     }
 
     .bot-btn.blue-dark-blue.contact {
@@ -1495,11 +1500,17 @@ select {
 
 @media (max-width: 499px) {
     .navbar-default .navbar-nav>li:nth-child(2) {
+        margin-left: 0;
+    }
+    .navbar-default .navbar-nav>li {
         margin-left: 2%;
+    }
+    .navbar-default .navbar-nav>li>a {
+        margin-left: 14%;
     }
 
     .navbar-default .navbar-nav>li>a {
-        margin-left: 16%;
+        /*margin-left: 16%;*/
     }
     .slide-3 .top p {
         margin-left: 12px;
@@ -1513,9 +1524,8 @@ select {
         padding: 14px 100px !important;
     }
 
-    .slide-6 .musement {
-        /*text-align: center;*/
-        /*margin-left: 15px;*/
+    .slide-6 .musement>img {
+        margin-left: 0;
     }
 
     .carousel-inner .bot-card .left {
@@ -1552,6 +1562,14 @@ select {
         background: linear-gradient(160deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 79%), url("../img/map.png");
 
     }
+
+    .left-arrow {
+        margin-left: 5% !important;
+    }
+}
+
+@media (min-width: 467px) and (max-width: 767px) {
+
 }
 
 @media (max-width: 467px) {
@@ -1560,9 +1578,38 @@ select {
     }
 }
 
+@media (max-width: 432px) {
+    /*.menu-item.bot-btn.blue-dark-blue.messenger .text {*/
+        /*display: none;*/
+    /*}*/
+    .menu-item.bot-btn.blue-dark-blue.messenger {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 575px) {
+    .slide-9 .team-img {
+        margin-top: 6%;
+    }
+}
+
 @media (max-width: 414px) {
     .bot-btn.blue-dark-blue.join {
-        /*padding: 14px 67px;*/
+        display: block;
+        width: 50%;
+        margin:6px auto;
+    }
+
+    .slide-9 .bot-btn.white-blue.more-about {
+        display: block;
+        width: 50%;
+        margin:6px auto;
+        margin-bottom: 18px;
+    }
+    .slide-9 .middle p {
+        padding-bottom: 0;
     }
 
     .slide-2, .slide-2 .bot-preview-block, .slide-2 .col-lg-7 {
@@ -1582,13 +1629,26 @@ select {
         margin-top: -200px;
     }
 
-    .slide-6 .musement {
-        padding-left: 0;
-        padding-right: 0;
-    }
+    /*.slide-6 .musement {*/
+        /*padding-left: 0;*/
+        /*padding-right: 0;*/
+    /*}*/
 }
 
 @media (max-width: 384px) {
+    .left-arrow {
+        margin-left: 4% !important;
+    }
+    .navbar-default .navbar-nav>li>a {
+        margin-left: 0;
+    }
+    .nav>li>a {
+        padding: 0;
+    }
+    .navbar li>.menu-item.bot-btn {
+        padding-left: 33%;
+    }
+
     .bot-btn.blue-dark-blue.join {
         /*padding: 14px 54px;*/
     }
@@ -1619,7 +1679,7 @@ select {
     }
 
     .navbar-default .navbar-nav>li:nth-child(2) {
-        margin-left: 9%;
+        /*margin-left: 9%;*/
     }
     .navbar-header span.menu-item {
         display: none;
@@ -1658,6 +1718,10 @@ select {
     .slide-2 .iphone-image {
         max-height: 72%;
         width: 100%;
+    }
+
+    .left-arrow {
+        margin-left: 1% !important;
     }
 }
 
