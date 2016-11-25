@@ -1,7 +1,6 @@
 /*above-the-fold styles end*/
 .nopadding {
     padding: 0 !important;
-    /*margin: 0 !important;*/
 }
 
 .bot-btn.white-snow {
@@ -80,8 +79,6 @@
 }
 
 .iphone-image {
-    /*left: 50%;*/
-    /*transform: translate(-50%, 0);*/
     position: absolute;
     bottom: 0;
 }
@@ -89,8 +86,6 @@
 .slide-2 .iphone-image {
     left: 50%;
     transform: translate(-50%, 0);
-    /*position: absolute;*/
-    /*bottom: 0;*/
     max-height: 100%;
 }
 
@@ -112,7 +107,6 @@
     line-height: 140%;
     letter-spacing: 0.0166px;
     color: #828282;
-    /*width: 63%;*/
     text-align: left;
     margin-top: 20px;
 }
@@ -181,7 +175,6 @@
 .slide-3 .graphic-img {
     width: 100%;
     height: 400px;
-    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
 }
 
 .slide-3 .right p {
@@ -205,11 +198,7 @@
 }
 .check-icon {
     display: table-cell;
-    /*float: left;*/
-    /*padding-top: 22px;*/
-    /*margin-right: 15px;*/
     width: 30px;
-    /*height: auto;*/
     vertical-align: middle;
 
 }
@@ -266,7 +255,6 @@
 
 .slide-4 .bottom ul {
     margin-bottom: 0;
-    /*margin-top: 60px;*/
     list-style-type: none;
     padding-left: 0;
     height: 88px;
@@ -396,7 +384,6 @@
     min-height: 100vh;
     background-color: #FAFAFA;
     padding-right: 0;
-    /*padding-left: 0;*/
 }
 
 .slide-6 h2 {
@@ -425,23 +412,12 @@
     margin-top: 30px;
 }
 
-.slide-6 img {
-    /*vertical-align: bottom;*/
-    /*width: 100%;*/
-}
-
-.slide-6 .col-lg-1>a.left {
-    /*margin-left: 30px;*/
-}
 .slide-6 .col-lg-1>a .carousel-control {
     width: 60px;
     height: 60px;
     margin-top: -300px;
 }
 
-.slide-6 .bot-card p, .slide-6 .bot-card h2 {
-    /*margin: 25px 25px;*/
-}
 .slide-6 .bot-card p.description {
     width: 48%;
 }
@@ -517,9 +493,6 @@
 .slide-7 .content .customer p {
     padding: 0;
 }
-/*.slide-7 .content .customer>p {*/
-    /*padding-top: 8px;*/
-/*}*/
 
 .slide-8 {
     max-width: 100%;
@@ -546,7 +519,6 @@
     margin-bottom: 14px
 }
 .slide-8 .pricing .block .top-subblock {
-    /*height: 80px;*/
     width:100%;
     background: #2F80ED;
     font-size: 28px;
@@ -820,9 +792,6 @@ select {
     }
 }
 
-@media (min-width: 1200px) {
-
-}
 @media (max-width: 1199px) {
     .navbar-brand {
         padding-left: 50px;
@@ -846,9 +815,6 @@ select {
         margin-top: 40px;
     }
 
-    /*.bot-btn.select {*/
-        /*padding: 15px 133px !important;*/
-    /*}*/
     .bot-btn.select-side, .bot-btn.select {
         margin-top: 200px !important;
         padding: 15px 99px !important;
@@ -861,8 +827,6 @@ select {
     .slide-3 .graphic-img {
         width: 100%;
         height: 400px;
-        /*width: 77%;*/
-        /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
     }
 
     .slide-6 .bot-card p.description {
@@ -938,7 +902,6 @@ select {
         line-height: 120%;
         letter-spacing: 0.0166px;
         color: #828282;
-        /*width: 63%;*/
         text-align: left;
         margin-top: 20px;
     }
@@ -949,10 +912,6 @@ select {
     }
     .slide-5 .using-description {
         width: 100%;
-    }
-
-    .slide-6 .bot-card p, .slide-6 .bot-card h2 {
-        /*margin: 25px 30px;*/
     }
 
     .slide-6 .musement>img {
@@ -973,7 +932,6 @@ select {
 
     .musement {
         margin-top: 30px;
-        /*text-align: center;*/
     }
 
     .menu-item.bot-btn.blue-dark-blue.messenger {
@@ -1004,20 +962,10 @@ select {
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-    .menu-item.bot-btn.blue-dark-blue.messenger {
-        /*margin-left: 22px;*/
-    }
-}
-
 @media (min-width: 768px) {
     .navbar-header .bot-btn.white-blue.contact {
         display: none;
     }
-
-    /*.slide-2 .description {*/
-        /*padding-bottom: 66px;*/
-    /*}*/
 
     .slide-4 .left {
         margin-bottom: 100px;
@@ -1063,9 +1011,6 @@ select {
     .navbar-nav {
         padding: 20px 24px 9px 24px;
     }
-    .navbar-header .navbar-brand {
-        /*margin: 18px 0 0 20px;*/
-    }
 
     .navbar-header .bot-btn.white-blue.contact {
         position: absolute;
@@ -1094,15 +1039,12 @@ select {
         float: left;
         width: 20%;
         margin-left: 22%;
-        /*padding-right: 8%;*/
     }
 
     .navbar li>.menu-item.bot-btn {
         border: none;
-        color: #555 !important;
     }
     .navbar li>.menu-item.bot-btn:hover {
-        color: #555 !important;
         background: transparent !important;
     }
 
@@ -1124,16 +1066,10 @@ select {
         padding-bottom: 66px;
     }
 
-    .slide-2, .slide-2 .bot-preview-block, .slide-2 .col-lg-7 {
-        /*min-height: 95vh;*/
-    }
-
     .slide-2 .bot-btn {
         margin-top: 20px;
         margin-bottom: 100px;
         position: absolute;
-        /*left: 50%;*/
-        /*transform: translate(-62%, 0);*/
     }
 
     .iphone-image {
@@ -1148,12 +1084,6 @@ select {
         margin-top: 20px;
         margin-left: 20px;
     }
-
-    /*.slide-3 .advantages-list {*/
-        /*width: 100%;*/
-        /*margin-top: 5%;*/
-        /*margin-left: 2%;*/
-    /*}*/
 
     .slide-3 .graphic-img {
         height: 350px;
