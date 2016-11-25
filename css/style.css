@@ -24,6 +24,7 @@
     border: 1px solid #2F80ED;
     border-radius: 4px;
     margin: 7px;
+    margin-left: 0;
     padding: 14px 23px;
 }
 .bot-btn.blue-dark-blue.contact {
@@ -90,8 +91,7 @@
     transform: translate(-50%, 0);
     /*position: absolute;*/
     /*bottom: 0;*/
-    /*max-height: 100%;*/
-    /*width: auto;*/
+    max-height: 100%;
 }
 
 .slide-2 .description {
@@ -440,7 +440,7 @@
 }
 
 .slide-6 .bot-card p, .slide-6 .bot-card h2 {
-    margin: 25px 25px;
+    /*margin: 25px 25px;*/
 }
 .slide-6 .bot-card p.description {
     width: 48%;
@@ -944,7 +944,7 @@ select {
     }
 
     .slide-6 .bot-card p, .slide-6 .bot-card h2 {
-        margin: 25px 30px;
+        /*margin: 25px 30px;*/
     }
 
     .slide-6 .musement>img {
@@ -965,6 +965,7 @@ select {
 
     .musement {
         margin-top: 30px;
+        /*text-align: center;*/
     }
 
     .menu-item.bot-btn.blue-dark-blue.messenger {
@@ -995,16 +996,24 @@ select {
     }
 }
 
-@media (min-width: 768px) {
-    .slide-4 .left {
-        margin-bottom: 100px;
-        margin-top: 0;
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu-item.bot-btn.blue-dark-blue.messenger {
+        /*margin-left: 22px;*/
     }
 }
 
 @media (min-width: 768px) {
     .navbar-header .bot-btn.white-blue.contact {
         display: none;
+    }
+
+    /*.slide-2 .description {*/
+        /*padding-bottom: 66px;*/
+    /*}*/
+
+    .slide-4 .left {
+        margin-bottom: 100px;
+        margin-top: 0;
     }
 
     .slide-5 .left {
@@ -1025,7 +1034,8 @@ select {
 
     .menu-item.bot-btn.blue-dark-blue.messenger {
         float: left;
-        margin-left: 28px;
+        /*margin-left: 28px;*/
+        text-align: center;
     }
 
     #carouselBotCard {
@@ -1076,7 +1086,7 @@ select {
     }
 
     .slide-1 {
-        margin-top: 14%;
+        margin-top: 8%;
         min-height: 72vh;
     }
 
@@ -1090,6 +1100,7 @@ select {
 
     .slide-2 .description {
         margin-top: 66px;
+        padding-bottom: 122px;
     }
 
     .slide-2, .slide-2 .bot-preview-block, .slide-2 .col-lg-7 {
@@ -1229,7 +1240,7 @@ select {
 @media (max-width: 575px) {
     .slide-6 .musement>img {
         width: 88%;
-        margin-left: 4%;
+        margin-left: 30px;
         height: auto;
         margin-top: 20px;
     }
@@ -1405,11 +1416,11 @@ select {
 
     .slide-8 .top>h2 {
         /*text-align: left;*/
-        padding-left: 20px;
+        /*padding-left: 20px;*/
     }
     .slide-8 .top>p {
         width: 92%;
-        margin-left: 20px;
+        /*margin-left: 20px;*/
         /*text-align: left;*/
     }
 
@@ -1418,7 +1429,7 @@ select {
     }
 
     .slide-8 .pricing {
-        padding-right: 0;
+        /*padding-right: 0;*/
     }
     .slide-8 .pricing .block {
         margin-top: -50px;
@@ -1434,10 +1445,10 @@ select {
     .slide-9 .bot-btn.white-blue {
         display: block;
         margin: 24px 66px;
-        padding: 14px 21px;
+        padding: 14px 10px;
     }
     .slide-9 .bot-btn.white-blue.more-about {
-        padding: 14px 18px !important;
+        /*padding: 14px 18px !important;*/
         /*margin: 24px 158px;*/
         width: 50%;
         margin: 24px auto;
@@ -1489,10 +1500,10 @@ select {
     }
 
     .bot-btn.blue-dark-blue.join {
-        padding: 14px 50px;
+        /*padding: 14px 50px;*/
     }
 
-    .menu-item.bot-btn.blue-dark-blue.messenger
+    /*.menu-item.bot-btn.blue-dark-blue.messenger*/
 
     .slide-7 .top h2 {
         text-align: left;
@@ -1504,7 +1515,7 @@ select {
         text-align: left;
     }
     .slide-7 .customer-block {
-        margin-left: 12px;
+        /*margin-left: 12px;*/
     }
 
     .slide-8 .middle {
@@ -1520,29 +1531,56 @@ select {
     }
 }
 
+@media (max-width: 467px) {
+    .menu-item.bot-btn.blue-dark-blue.messenger {
+        padding: 14px 12px;
+    }
+}
+
 @media (max-width: 414px) {
     .bot-btn.blue-dark-blue.join {
-        padding: 14px 67px;
+        /*padding: 14px 67px;*/
     }
 
     .slide-2, .slide-2 .bot-preview-block, .slide-2 .col-lg-7 {
         min-height: 66vh;
-        padding-bottom: 30px;
+        /*padding-bottom: 30px;*/
+    }
+
+    .slide-2 .iphone-image {
+        width: 90%;
     }
 
     .slide-2 .description {
         margin-bottom: 95px;
     }
+
+    .slide-6 .col-lg-1>a .carousel-control {
+        margin-top: -200px;
+    }
+
+    .slide-6 .musement {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 384px) {
     .bot-btn.blue-dark-blue.join {
-        padding: 14px 54px;
+        /*padding: 14px 54px;*/
+    }
+
+    .slide-2 .iphone-image {
+        width: 100%;
+    }
+
+    .slide-6 .musement>img {
+        margin-left: 4%;
     }
 }
 @media (max-width: 379px) {
     .bot-btn.blue-dark-blue.join {
-        padding: 14px 49px;
+        /*padding: 14px 49px;*/
     }
 
     .slide-1 {
@@ -1574,24 +1612,29 @@ select {
     }
 
     .slide-7 .top, .slide-8 .top p {
-        padding-left: 25px;
+        /*padding-left: 25px;*/
     }
     .slide-7 .top h2 {
         margin-left: 44px;
     }
 
     .slide-7 .customer-block {
-        margin-left: 10px;
+        /*margin-left: 10px;*/
     }
 
     .slide-8 .top>h2 {
-        padding-left: 40px;
+        /*padding-left: 40px;*/
     }
 }
 
 @media (max-width: 360px) {
     .bot-btn.blue-dark-blue.join {
-        padding: 14px 43px;
+        /*padding: 14px 43px;*/
+    }
+
+    .slide-2 .iphone-image {
+        max-height: 72%;
+        width: 100%;
     }
 }
 
@@ -1621,5 +1664,11 @@ select {
 
     .bot-btn.blue-dark-blue.join {
         padding: 14px 22px;
+    }
+}
+
+@media (max-height: 500px) and (min-width: 800px) {
+    .slide-2 {
+        margin-top: 45px;
     }
 }
