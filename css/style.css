@@ -1326,7 +1326,8 @@ select {
         text-align: left;
     }
     .slide-2 .description {
-        margin-bottom: 133px;
+        margin-bottom: 0;
+        margin-top: 33px;
     }
     .slide-2, .slide-2 .bot-preview-block, .slide-2 .col-lg-7 {
         min-height: 66vh;
