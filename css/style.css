@@ -1047,6 +1047,10 @@ select {
     }
 }
 @media (max-width: 767px) {
+    .navbar-default .navbar-nav>li:nth-child(2) {
+        margin-left: 6%;
+    }
+
     .slide-1 {
         transform: translate(0, 12%);
     }
@@ -1054,16 +1058,22 @@ select {
         margin-top: -10px;
     }
     .navbar-nav {
-        padding: 23px 24px 0 24px;
+        padding: 20px 24px 9px 24px;
     }
     .navbar-header .navbar-brand {
-        margin: 18px 0 18px 20px;
+        /*margin: 18px 0 0 20px;*/
     }
 
     .navbar-header .bot-btn.white-blue.contact {
         position: absolute;
         margin: 20px;
         right: 2%;
+    }
+    .navbar-default .navbar-nav>li:first-child {
+        display: none;
+    }
+    .navbar-brand {
+        margin: 12px;
     }
 
     .navbar-default .navbar-nav>li {
@@ -1079,10 +1089,18 @@ select {
     .navbar-default .navbar-nav>li>a {
         display: inline-block;
         float: left;
+        width: 20%;
+        margin-left: 33%;
+        /*padding-right: 8%;*/
     }
 
     .navbar li>.menu-item.bot-btn {
-        display: none;
+        border: none;
+        color: #555 !important;
+    }
+    .navbar li>.menu-item.bot-btn:hover {
+        color: #555 !important;
+        background: transparent !important;
     }
 
     .slide-1 {
@@ -1249,17 +1267,15 @@ select {
     }
 
     .navbar-default .navbar-nav>li {
-        width: 24%;
+        /*width: 22%;*/
         display: inline-block;
     }
-    .navbar-default .navbar-nav>li:first-child {
-        display: none;
-    }
+
     .navbar-default .navbar-nav>li:nth-child(2) {
-        margin-left: 14%;
+        margin-left: 6%;
     }
     .navbar-default .navbar-nav>li:last-child {
-        margin-right: 14%;
+        /*margin-right: 14%;*/
     }
 
     .navbar .container-fluid {
@@ -1272,7 +1288,7 @@ select {
 
     .navbar-header {
         width: 100%;
-        height: 88px;
+        /*height: 88px;*/
     }
 
     .container-fluid {
@@ -1478,6 +1494,13 @@ select {
 }
 
 @media (max-width: 499px) {
+    .navbar-default .navbar-nav>li:nth-child(2) {
+        margin-left: 2%;
+    }
+
+    .navbar-default .navbar-nav>li>a {
+        margin-left: 16%;
+    }
     .slide-3 .top p {
         margin-left: 12px;
     }
