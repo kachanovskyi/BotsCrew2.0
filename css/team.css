@@ -1,0 +1,119 @@
+h2 {
+    font-size: 28px;
+    letter-spacing: 0.0166px;
+    color: #4F4F4F;
+}
+
+p {
+    font-size: 18px;line-height: 140%;letter-spacing: 0.0166px;color: #828282;
+}
+
+.standard-menu-item {
+    color: #333 !important;
+}
+
+.learn-more-link {
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.0166px;
+    color: #2F80ED;
+}
+.learn-more-link:hover, .learn-more-link:visited {
+    color: #2F80ED;
+}
+
+.bot-btn.white {
+    border: 1px solid #FFFFFF;
+    color:#FFFFFF!important
+}
+.bot-btn.white:hover {
+    background-color:transparent!important;
+}
+
+.icon-bar {
+    background-color: #FFFFFF !important;
+}
+
+.top {
+    /*background: url("../img/team_top_image.png");*/
+    /*background-size: contain;*/
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100vh;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.top>img {
+    /*width: 100%;*/
+    height: 100%;
+    text-align: center;
+}
+
+.top>h1 {
+    font-size: 42px;
+    color: #FFFFFF;
+    margin-top: -50vh;
+}
+
+.content {
+    text-align: left;
+    margin-top: 44px;
+}
+.content h2 {
+    margin-top: 24px;
+}
+.content .article {
+    padding-top: 6px;
+}
+
+.members {
+    margin-top: 33px !important;
+}
+.member-card {
+    /*width: 32.3%;*/
+    /*display: inline-block;*/
+    text-align: center;
+}
+.member-card .name {
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+.bottom {
+    margin-top: 60px;
+    position: relative;
+}
+.bottom .follow {
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    color: #2F80ED;
+    padding: 0 12px;
+    position: absolute;
+    left: 40.5%;
+    top: 50%;
+}
+.bottom .follow:hover {
+    cursor: pointer;
+    border: 1px solid #2F80ED;
+}
+.bottom .block {
+    padding-left: 0;
+    padding-right: 0;
+}
+.bottom .block>img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 767px) {
+    .navbar-default {
+        border-bottom:1px solid #E5E5E5
+    }
+}

@@ -4,6 +4,15 @@ $(document).ready(function () {
     var delta = 5;
     var navbarHeight = $('.navbar-fixed-top').outerHeight();
 
+    var listElem = $('.slide-4 .bottom ul>li');
+    var displayAmount;
+    for (var i = 0; i < listElem.length - 1; i++) {
+        if($(listElem[i]).css('display') === 'block') {
+            displayAmount++;
+        }
+    }
+
+
     $(window).scroll(function(event){
         didScroll = true;
     });
@@ -86,6 +95,7 @@ $(document).ready(function () {
     });
 
     var progressBarInit = function () {
+        console.log('progressBarInit');
         addMessages(phrases);
         bar.animate(1.0, function() {
             var messagesLength = $('.bot-example').children().length;
@@ -110,73 +120,147 @@ $(document).ready(function () {
     // });
 
 
-    var listElem = $('.slide-4 .bottom ul>li');
-    var displayAmount = 0;
     var firstDisplayed = 0;
-    // console.log(elementWidth, 'element width');
         $(window).on('resize', function(){
+        var listElem = $('.slide-4 .bottom ul>li');
         console.log('window resized');
-        console.log(listElem.length, 'length');
-        listElem = $('.slide-4 .bottom ul>li');
-        displayAmount = 0;
+        console.log(listElem.length, 'length of listElem');
         firstDisplayed = 0;
+        displayAmount = 0;
         for (var i = 0; i < listElem.length - 1; i++) {
             if($(listElem[i]).css('display') === 'block') {
                 displayAmount++;
-                console.log(displayAmount, 'displayAmount');
             }
         }
     }());
 
+    var counter = 0;
     var listScrollNext = function () {
-        var elemFound = false;
-        var elementWidth;
-        var lastElem = $(listElem[listElem.length - 1]);
-        // var listWidth = $(window).width() - lastElem.css('width');
-        console.log(lastElem.css('width'), 'width1');
-        console.log(lastElem.outerWidth(), 'width2');
-        console.log($(window).width(), 'window width');
-
-        // console.log(listElem.length, 'lenght');
-        // console.log($($('.slide-4 .bottom ul>li')[0]).css('display'));
-        if((firstDisplayed + displayAmount) === (listElem.length - 1)) {
-            for(i = 0; i < displayAmount; i++) {
-                $(listElem[i]).css('display', 'block');
-                $(listElem[i]).css('width', elementWidth);
-                firstDisplayed = 0;
-                elementWidth = $(listElem[0]).css('width');
-                // $(lastElem).css('width', ($(window).css('width') - displayAmount*elementWidth));
-                console.log(($(window).css('width') - ((displayAmount*elementWidth) + 'px')), 'TEST');
-                console.log($(lastElem).css('width'), 'lastElem width404');
-                console.log('displayed new');
-            }
-            for(i = displayAmount; i < listElem.length - 1; i++) {
+        console.log(displayAmount, 'displayAmount');
+        var listElem = $('.slide-4 .bottom ul>li');
+        if($(listElem[listElem.length - 2]).css('display') == 'block') {
+            counter = 0;
+            for(var i = 0; i < listElem.length - 1; i ++) {
                 $(listElem[i]).css('display', 'none');
-            }
-        } else {
-            for (i = 0; i < listElem.length - 1; i++) {
-                if($(listElem[i]).css('display') === 'block') {
-                    firstDisplayed = i;
-                    elementWidth = $(listElem[i]).css('width');
-                    console.log(elementWidth, 'elementWidth1111');
-                    console.log(firstDisplayed, 'firstDisplayed');
-                    break;
+                console.log($(listElem[listElem.length - 2]).css('display'), 'loop ' + i);
+                if(i < displayAmount) {
+                    console.log(displayAmount, 'i < displayAmount');
+                    $(listElem[i]).css('display', 'block');
+                    console.log($(listElem[i]).css('display'), 'reloading');
                 }
             }
-            $(listElem[i]).css('display', 'none');
-            $(listElem[i + displayAmount]).css('display', 'block');
-            // elementWidth -=1;
-            console.log(elementWidth, "ELEMENT WIDTH");
-            $(listElem[i + displayAmount]).css('width', elementWidth);
-            console.log(i+displayAmount, 'i+displayAmount');
-            console.log($(listElem[i + displayAmount]).css('width'), 'this element width');
+        } else {
+            $(listElem[counter]).css('display', 'none');
+            console.log($(listElem[counter]).css('display'), 'display counter');
+            $(listElem[counter + displayAmount]).css('display', 'block');
+            console.log($(listElem[counter + displayAmount]).css('display'), 'display counter+2');
+            counter++;
         }
-        return false;
     };
-    // listScrollNext();
     $('#listScrollNext').click(function (e) {
         console.log('worked');
         listScrollNext();
         return false;
     })
 });
+
+// var listScrollNext = function () {
+//     // console.log(window.getComputedStyle(document.getElementsByClassName('bottom-list-item')[0]).getPropertyValue('display'), 'blah');
+//     var elems = document.getElementsByClassName('bottom-list-item');
+//     console.log(elems, 'blah');
+//     if($(listElem[listElem.length - 2]).css('display') == 'block') {
+//         console.log('first if-block');
+//         for(var j = 0; j < (listElem.length - 1); j++) {
+//             if(j < displayAmount) {
+//                 $(listElem[j]).css('display', 'block');
+//                 // document.getElementsByClassName('bottom-list-item')[i].style.display = 'block';
+//                 // console.log($(listElem[j]).css('display'),'lwifjpnperenjklgnelrnjlergnjlergnljerngjlergnjlernglerr');
+//                 console.log('reloading blocks');
+//             } else {
+//                 // console.log(elems[i], 'elems');
+//                 // console.log($(listElem[j]).css('display'),'lwifjpnperenjklgnelrnjlergnjlergnljerngjlergnjlernglerr');
+//                 // elems[i].style.display = 'none';
+//                 $(listElem[j]).css('display', 'none');
+//                 console.log($(listElem[j]).css('display'), 'ukuku');
+//                 // console.log(document.getElementsByClassName('bottom-list-item')[i], 'reloading hidden elements');
+//             }
+//         }
+//     }
+//     for(var i = 0; i < listElem.length - 1; i++) {
+//         console.log('loop one');
+//         // console.log($(listElem[j]).css('display'));
+//         if($(listElem[i]).css("display") === "block") {
+//             console.log('block found ' + i);
+//             document.getElementsByClassName('bottom-list-item')[i].style.display = 'none';
+//             // $(listElem[i]).css("display", "none");
+//             break;
+//         }
+//     }
+//     for(i; i < listElem.length - 1; i++) {
+//         console.log('loop two ' + $(listElem[i]).css('display'));
+//         if($(listElem[i]).css('display') === 'none') {
+//             document.getElementsByClassName('bottom-list-item')[i].style.display = 'block';
+//             // $(listElem[i]).css("display", "block");
+//             console.log('hidden element found, displaying next ' + i + " " + $(listElem[i]).css('display'));
+//             break;
+//         }
+//     }
+// };
+
+// var listScrollNext = function () {
+//     // var elemFound = false;
+//     var lastElem = $(listElem[listElem.length - 1]);
+//     console.log(displayAmount,'displayAmount');
+//     // var windowWidth = $(window).width();
+//     // var listWidth = $(window).width() - lastElem.css('width');
+//     // console.log(lastElem.css('width'), 'width1');
+//     // console.log(lastElem.outerWidth(), 'width2');
+//     // console.log(windowWidth, 'window width');
+//     // console.log(firstDisplayed + " " + displayAmount, 'firstDisplayed + displayAmount');
+//     // console.log((listElem.length-1), 'listElem.length - 1');
+//
+//     // console.log(listElem.length, 'lenght');
+//     // console.log($($('.slide-4 .bottom ul>li')[0]).css('display'));
+//     if((firstDisplayed + displayAmount) === (listElem.length - 1)) {
+//         alert(firstDisplayed + " " + displayAmount + ': firstDisplayed + displayAmount');
+//         alert((listElem.length-1) + ' listElem.length - 1');
+//         for(var i = 0; i < displayAmount; i++) {
+//             $(listElem[i]).css('display', 'block');
+//             // $(listElem[i]).css('width', elementWidth);
+//             // var arrowWidth = windowWidth - displayAmount*elementWidth;
+//             firstDisplayed = 0;
+//             // $(lastElem).css('width', ($(window).css('width') - displayAmount*elementWidth));
+//             // console.log(($(window).css('width') - ((displayAmount*elementWidth) + 'px')), 'TEST');
+//             // console.log($(lastElem).css('width'), 'lastElem width404');
+//             console.log('displayed new');
+//         }
+//         for(i = displayAmount; i < listElem.length - 1; i++) {
+//             // $(listElem[i]).css('display', 'none');
+//         }
+//     } else {
+//         console.log('else block');
+//         for (i = 0; i < listElem.length - 1; i++) {
+//             if($(listElem[i]).css('display') === 'block') {
+//                 firstDisplayed = i;
+//                 $(listElem[i]).css('display', 'none');
+//                 $(listElem[i + displayAmount]).css('display', 'block');
+//                 // elementWidth = $(listElem[i]).css('width');
+//                 // console.log(elementWidth, 'elementWidth1111');
+//                 console.log(firstDisplayed, 'firstDisplayed');
+//                 console.log(i+displayAmount, 'i+displayAmount');
+//                 console.log($(listElem[i + displayAmount]).css('width'), 'this element width');
+//                 break;
+//             }
+//         }
+//         // $(listElem[i]).css('display', 'none');
+//         // $(listElem[i + displayAmount]).css('display', 'block');
+//         // elementWidth -=1;
+//         // $(listElem[i + displayAmount]).css('width', elementWidth);
+//         // var arrowWidth = (windowWidth - displayAmount*elementWidth);
+//         // console.log(arrowWidth, 'arrowWidth');
+//         // $(lastElem).css('width', arrowWidth);
+//
+//     }
+//     return false;
+// };
+// listScrollNext();

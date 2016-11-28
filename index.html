@@ -31,7 +31,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#" class="menu-item">Introduction</a></li>
                 <li><a href="#" class="menu-item">Blog</a></li>
-                <li><a href="#" class="menu-item">Team</a></li>
+                <li><a href="html/team.html" class="menu-item">Team</a></li>
                 <li><a href="#" class="menu-item">Careers</a></li>
                 <li><a href="#" class="menu-item bot-btn white-blue">Contact</a></li>
               </ul>
@@ -130,16 +130,16 @@
         </div>
         <div class="bottom col-lg-12">
           <ul>
-            <li>
+            <li  class="bottom-list-item">
               <a href="#botUsesCard" data-slide-to="0" class="active">Hospitality</a>
               <div id="progressbar-container"></div>
             </li>
-            <li><a href="#botUsesCard" data-slide-to="1">Customer Service</a></li>
-            <li><a href="#botUsesCard" data-slide-to="0">Finance</a></li>
-            <li><a href="#botUsesCard" data-slide-to="1">E-Commerce</a></li>
-            <li><a href="#botUsesCard" data-slide-to="0">Entertainment</a></li>
-            <li><a href="#botUsesCard" data-slide-to="1">Concierge service</a></li>
-            <li><a id="listScrollNext" href=""><img src="img/arrow.png"></a></li>
+            <li class="bottom-list-item"><a href="#botUsesCard" data-slide-to="1">Customer Service</a></li>
+            <li class="bottom-list-item"><a href="#botUsesCard" data-slide-to="0">Finance</a></li>
+            <li class="bottom-list-item"><a href="#botUsesCard" data-slide-to="1">E-Commerce</a></li>
+            <li class="bottom-list-item"><a href="#botUsesCard" data-slide-to="0">Entertainment</a></li>
+            <li class="bottom-list-item"><a href="#botUsesCard" data-slide-to="1">Concierge service</a></li>
+            <li class="bottom-list-item"><a id="listScrollNext" href="#"><img src="img/arrow.png"></a></li>
           </ul>
         </div>
       </div>
@@ -181,12 +181,26 @@
           <h2 class="text-center">We're proud of our bots</h2>
           <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 carousel-block">
           <div class="row">
           <div id="carouselBotCard" class="carousel slide" data-ride="carousel" data-interval="false">
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
               <div class="item active">
+                <div class="bot-card">
+                  <div class="row">
+                    <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-6 col-md-push-6 col-lg-6 col-lg-push-6 musement">
+                      <h2>Musement</h2>
+                      <p class="description">Travel Assistant for activities, tours, attractions, tickets, city passes and more. Musement helps travellers get the best from destinations by providing a great choice of local tours and attractions bookable on multiple devices. </p>
+                      <a href="#" class="menu-item bot-btn blue-dark-blue messenger"><img src="img/messenger_icon.svg" class="fb-messenger-img"> <span class="text">Open in messenger</span></a>
+                    </div>
+                    <div class="col-xs-offset-2 col-xs-8 col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-10 col-md-pull-1 col-lg-4 col-lg-pull-4 musement">
+                      <img src="img/musement.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
                 <div class="bot-card">
                   <div class="row">
                     <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-6 col-md-push-6 col-lg-6 col-lg-push-6 musement">
@@ -451,7 +465,6 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <!--<script src="js/jquery-1.11.3.min.js"></script>-->
   <script defer src="js/progressbar.min.js"></script>
   <script defer src="js/index.js"></script>
 </body>
