@@ -35,8 +35,8 @@ p {
 }
 
 .top {
-    /*background: url("../img/team_top_image.png");*/
-    /*background-size: contain;*/
+    background: url("../img/team_top_image.png");
+    background-size: cover;
     display: block;
     float: left;
     width: 100%;
@@ -46,7 +46,7 @@ p {
 }
 
 .top>img {
-    /*width: 100%;*/
+    width: 100%;
     height: 100%;
     text-align: center;
 }
@@ -54,7 +54,7 @@ p {
 .top>h1 {
     font-size: 42px;
     color: #FFFFFF;
-    margin-top: -50vh;
+    margin-top: 50vh;
 }
 
 .content {
