@@ -11,6 +11,9 @@ p {
 .standard-menu-item {
     color: #333 !important;
 }
+.icon-bar.white {
+    background-color: #FFFFFF !important;
+}
 
 .learn-more-link {
     font-size: 18px;
@@ -30,13 +33,10 @@ p {
     background-color:transparent!important;
 }
 
-.icon-bar {
-    background-color: #FFFFFF !important;
-}
-
 .top {
     background: url("../img/team_top_image.png");
     background-size: cover;
+    background-position: center;
     display: block;
     float: left;
     width: 100%;
@@ -95,8 +95,10 @@ p {
     color: #2F80ED;
     padding: 0 12px;
     position: absolute;
-    left: 40.5%;
     top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 .bottom .follow:hover {
     cursor: pointer;
