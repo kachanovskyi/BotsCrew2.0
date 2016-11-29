@@ -19,7 +19,7 @@ var $w = $(window).scroll(function(){
         $('.icon-bar').addClass('white');
     }
 
-    if ( $w.scrollTop() > targetOffset - 44) {
+    if ( $w.scrollTop() > targetOffset - 66) {
         $('.navbar-default').css('border-bottom', '1px solid #E5E5E5');
         $('.navbar').css('background', '#FFFFFF');
     } else {

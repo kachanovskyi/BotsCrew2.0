@@ -99,10 +99,14 @@ p {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    /*z-index: 2;*/
 }
 .bottom .follow:hover {
     cursor: pointer;
     border: 1px solid #2F80ED;
+}
+.bottom .follow>img {
+    padding-bottom: 2px;
 }
 .bottom .block {
     padding-left: 0;
@@ -113,9 +117,19 @@ p {
     height: auto;
 }
 
+@media (max-width: 991px) {
+    .bottom .follow {
+        transform: translate(-50%, 0);
+        margin-top: 22%;
+    }
+}
 
 @media (max-width: 767px) {
     .navbar-default {
         border-bottom:1px solid #E5E5E5
     }
+}
+
+@media (max-width: 540px) {
+
 }
