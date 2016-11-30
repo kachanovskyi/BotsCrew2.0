@@ -428,7 +428,7 @@
     width: 48%;
 }
 
-#progressbar-container {
+.progressbar-container {
     display: block;
     position: absolute;
     left: 0;
@@ -1208,6 +1208,16 @@ select {
         display: block;
         padding: 20px 20px;
         margin:0 auto;
+    }
+}
+
+@media (min-width: 761px) and (max-width: 1199px) {
+    .slide-4 .left, .slide-4 .right {
+        display: block;
+        clear: both;
+    }
+    .slide-4 .right {
+        margin-left: 33%;
     }
 }
 

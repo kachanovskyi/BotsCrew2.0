@@ -12,7 +12,8 @@ $(document).ready(function () {
             }
         }
     });
-    
+
+    var progressSlide = 1;
     var didScroll;
     var lastScrollTop = 0;
     var delta = 5;
@@ -98,10 +99,9 @@ $(document).ready(function () {
     };
 
     //progress bar
-    var bar = new ProgressBar.Line('#progressbar-container', {
+    var bar = new ProgressBar.Line('.progressbar-container', {
         strokeWidth: 1,
-        // easing: 'easeInOut',
-        duration: 8000,
+        duration: 7000,
         color: '#2F80ED',
         trailColor: '#DFDFDF',
         trailWidth: 6,
@@ -109,29 +109,49 @@ $(document).ready(function () {
     });
 
     var progressBarInit = function () {
-        console.log('progressBarInit');
+        console.log(progressSlide, 'progressSlide');
         addMessages(phrases);
         bar.animate(1.0, function() {
             var messagesLength = $('.bot-example').children().length;
-            var timePerMessage = 3000 / messagesLength;
-            for (i = 0; i < messagesLength; i++) {
-                setTimeout(function () {
-                    var example = $('.bot-example');
-                    var child = example.children()[0];
-                    example.find('div').eq(0).remove();
-                }, i * timePerMessage);
+            $($('.slide-4 .bottom ul>li')[progressSlide]).append('<div class="progressbar-container"></div>');
+            $($('.slide-4 .bottom ul>li .progressbar-container')[0]).remove();
+            $('.slide-4 .bottom ul>li>a').removeClass('active');
+            $($('.slide-4 .bottom ul>li>a')[progressSlide]).addClass('active');
+            bar = new ProgressBar.Line('.progressbar-container', {
+                strokeWidth: 1,
+                // easing: 'easeInOut',
+                duration: 7000,
+                color: '#2F80ED',
+                trailColor: '#DFDFDF',
+                trailWidth: 6,
+                svgStyle: {width: '100%', height: '100%'}
+            });
+            if(progressSlide < 6) {
+                progressSlide++;
+                $('#botUsesCard').carousel('next');
+            } else {
+                progressSlide = 0;
+                $('.slide-4 .bottom ul>li .progressbar-container').remove();
+                // $($('.slide-4 .bottom ul>li')[progressSlide]).append('<div class="progressbar-container"></div>');
             }
-            bar.animate(0.0, {duration: 3000}, function () {
+            $('.bot-example').children().remove();
+            progressBarInit();
+
+            bar.animate(0.0, {duration: 1000}, function () {
                 progressBarInit();
             });
         });
     };
-    // var targetOffset = $('.slide-4').offset().top;
-    // var $w = $(window).scroll(function(){
-    //     if ( $w.scrollTop() > targetOffset ) {
-    //         progressBarInit();
-    //     }
-    // });
+    var targetOffset = $('.slide-4').offset().top;
+    var $w = $(window).scroll(function(){
+        if ( $w.scrollTop() > targetOffset ) {
+            progressBarInit(progressSlide);
+        }
+
+        if ( $w.scrollTop() > $('.slide-5').offset().top ) {
+            bar = {};
+        }
+    });
 
 
     var firstDisplayed = 0;
