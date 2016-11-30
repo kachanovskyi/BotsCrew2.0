@@ -75,6 +75,7 @@ p {
     min-height: 8vh;
     display: block;
     float: left;
+    border-top: 1px solid #CCCCCC;
 }
 .footer-fixed .background {
     width:100%;

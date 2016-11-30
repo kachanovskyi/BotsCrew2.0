@@ -9,13 +9,13 @@ var $w = $(window).scroll(function(){
         $('.menu-item').addClass('standard-menu-item');
         $('.header .menu-item.bot-btn').removeClass('white');
         $('.header .menu-item.bot-btn').addClass('white-blue');
-        $('.logo').attr('src', "../img/logo.svg");
+        $('.logo').attr('src', "img/logo.svg");
         $('.icon-bar').removeClass('white');
     } else {
         $('.menu-item').removeClass('standard-menu-item');
         $('.header .menu-item.bot-btn').removeClass('white-blue');
         $('.header .menu-item.bot-btn').addClass('white');
-        $('.logo').attr('src', "../img/logo_white.svg");
+        $('.logo').attr('src', "img/logo_white.svg");
         $('.icon-bar').addClass('white');
     }
 
