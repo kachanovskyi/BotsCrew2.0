@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b84ffc62-3f88-4b9b-862e-881918df00ee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crafting-a-great-branding-delivery.html" afterPath="$PROJECT_DIR$/crafting-a-great-branding-delivery.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/article-4-img-1.png" afterPath="$PROJECT_DIR$/img/article-4-img-1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/team_top_image.png" afterPath="$PROJECT_DIR$/img/team_top_image.png" />
     </list>
     <ignored path="botscrew 2.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -374,12 +375,12 @@
       <workItem from="1480411324032" duration="20483000" />
       <workItem from="1480463502625" duration="4297000" />
       <workItem from="1480494655963" duration="1161000" />
-      <workItem from="1480497140483" duration="6891000" />
+      <workItem from="1480497140483" duration="7213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="381457000" />
+    <option name="totallyTimeSpent" value="381779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
