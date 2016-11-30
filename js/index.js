@@ -110,7 +110,7 @@ $(document).ready(function () {
 
     var progressBarInit = function () {
         console.log(progressSlide, 'progressSlide');
-        addMessages(phrases);
+        // addMessages(phrases);
         bar.animate(1.0, function() {
             var messagesLength = $('.bot-example').children().length;
             $($('.slide-4 .bottom ul>li')[progressSlide]).append('<div class="progressbar-container"></div>');
