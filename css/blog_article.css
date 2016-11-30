@@ -119,3 +119,109 @@ p {
 .social-share .fb, .social-share .in, .social-share .tw {
     margin-left: 8px;
 }
+
+.article {
+    display: inline-block;
+    height: 500px;
+    /*height: 600px;*/
+    /*width: 98%;*/
+    margin: 10px auto;
+    padding: 20px 33px;
+    text-align: left;
+}
+.article h2 {
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0.0166px;
+    color: #4F4F4F;
+}
+.article p, .article a {
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.0166px;
+}
+
+.article p {
+    color: #828282;
+}
+.article a {
+    color: #2F80ED;
+}
+
+.article .preview-img {
+    display: block;
+    height: 60%;
+    width: 100%;
+    border-radius: 4px;
+    background-size: cover;
+}
+.article .preview-text {
+    display: block;
+    height: 40%;
+    width: 100%;
+}
+
+.article.article-4 .preview-img {
+    background: url("../img/article-4-img-1.png");
+}
+.article.article-3 .preview-img {
+    background: url("../img/article-3-img-1.png");
+}
+.article.article-2 .preview-img {
+    background: url("../img/article-2-img-1.png");
+}
+.article.article-1 .preview-img {
+    background: url("../img/article-1-img-1.png");
+}
+
+.recent p{
+    font-size: 18px;color: #828282;
+    float: left;
+    padding: 0 32px;
+    margin-bottom: 0;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .article {
+        margin: 40px auto;
+    }
+    #footer {
+        margin-top: 44px;
+    }
+}
+
+@media (min-width: 992px) {
+    .article.article-4 .preview-img, .article.article-3 .preview-img,
+    .article.article-2 .preview-img, .article.article-1 .preview-img {
+        background-position: center;
+    }
+}
+
+@media (max-width: 991px) {
+        .article {
+        padding: 0 33px;
+    }
+    .article.article-4 .preview-img, .article.article-3 .preview-img,
+    .article.article-2 .preview-img, .article.article-1 .preview-img {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 515px) {
+    .article {
+        height: auto;
+    }
+    .article .preview-img {
+        display: none;
+    }
+    .article .preview-text {
+        height: 100%;
+    }
+
+    .social-share {
+        margin-bottom: 33px;
+    }
+    .social-share .text {
+        display: none;
+    }
+}

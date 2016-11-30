@@ -760,6 +760,9 @@ select {
     display: inline-block;
     margin: 4% 5%;
 }
+.slide-10 .social-icon:hover {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
 
 .slide-10 .social-icon .left {
     margin-left: -15% !important;
@@ -1025,6 +1028,9 @@ select {
     }
 }
 @media (max-width: 767px) {
+
+    .bot-btn.white-blue.noborder:hover{color:#2F80ED!important}
+
     .navbar-default .navbar-nav>li:nth-child(2) {
         margin-left: 6%;
     }
