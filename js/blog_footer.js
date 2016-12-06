@@ -2,7 +2,7 @@ var targetOffsetTop = $('.social-share').offset().top;
 $(window).on('resize', function(){
     var targetOffsetTop = $('.social-share').offset().top;
 }());
-console.log(targetOffsetTop, 'targetOffset');
+// console.log(targetOffsetTop, 'targetOffset');
 var $w = $(window).scroll(function(){
     if ( $w.scrollTop() > 51) {
         $('.footer-fixed').removeClass('hidden');
@@ -12,7 +12,7 @@ var $w = $(window).scroll(function(){
         console.log('2');
     }
 
-    if ( ($w.scrollTop() + $w.height()) > (targetOffsetTop + 51*2)) {
+    if ( ($w.scrollTop() + $w.height()) > (targetOffsetTop)) {
         $('.footer-fixed').addClass('hidden');
     } else {
         $('.footer-fixed').removeClass('hidden');

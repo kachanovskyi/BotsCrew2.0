@@ -23,7 +23,7 @@ h1, h2, p, a {
 
 .article {
     display: inline-block;
-    height: 500px;
+    height: auto;
     /*height: 600px;*/
     /*width: 98%;*/
     margin: 10px auto;
@@ -50,7 +50,7 @@ h1, h2, p, a {
 
 .article .preview-img {
     display: block;
-    height: 60%;
+    height: 300px;
     width: 100%;
     border-radius: 4px;
     background-size: cover;
@@ -62,10 +62,10 @@ h1, h2, p, a {
 }
 
 .article.article-4 .preview-img {
-    background: url("../img/article-4-img-1.png");
+    background: url("../img/musement_contract.jpg");
 }
 .article.article-3 .preview-img {
-    background: url("../img/article-3-img-1.png");
+    background: url("../img/messengerForBusiness.jpg");
 }
 .article.article-2 .preview-img {
     background: url("../img/article-2-img-1.png");
