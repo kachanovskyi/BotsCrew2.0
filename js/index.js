@@ -107,23 +107,24 @@ $(document).ready(function () {
                 current = 0;
             }
 
-        }, 800);
+        }, 200);
     };
 
     var removeFirstElement = function(phraseObj) {
         $(phraseObj).fadeIn("slow");
-        var example = $($('.bot-example')[progressSlide]);
-        console.log(example.children()[example.children().length - 1]);
+        var example = $('.bot-example');
+        example.scrollTop(example[progressSlide].scrollHeight);
+
         // var exampleHeight = $(example[progressSlide]).outerHeight();
         // for(var i = 0; i < example.children().length; i++) {
         //     console.log(example.children()[i]);
         // }
-        if(example.children().length > 4) {
-            // var child = ;
-            $(example.children()[0]).remove();
-            console.log('removed ' + example.children().length);
-            // example.find('div').eq(0).remove();
-        }
+        // if(example.children().length > 4) {
+        //     // var example = $($('.bot-example')[progressSlide]);
+        //     // $(example.children()[0]).css('display', 'none');
+        //     // console.log('removed ' + example.children().length);
+        //     // example.find('div').eq(0).remove();
+        // }
     };
 
 
@@ -171,6 +172,7 @@ $(document).ready(function () {
         $(this).addClass('active');
         bar.stop();
         bar.set(0.0);
+        $('.bot-example').children().remove();
         progressSlide = listItemLink.index(this);
 
         $($('.slide-4 .bottom ul>li .progressbar-container')[0]).remove();
@@ -196,7 +198,8 @@ $(document).ready(function () {
     });
 
 
-    $(window).on('resize', function(){
+    var $rw = $(window).resize(function(){
+        console.log('resized');
         var listElem = $('.slide-4 .bottom ul>li');
         displayAmount = 0;
         for (var i = 0; i < listElem.length - 1; i++) {
@@ -204,7 +207,10 @@ $(document).ready(function () {
                 displayAmount++;
             }
         }
-    }());
+        var middle = $('.slide-4 .middle');
+        var maxHeight = middle.height();
+        middle.css('max-height', maxHeight);
+    });
 
     var counter = 0;
     var listScrollNext = function () {

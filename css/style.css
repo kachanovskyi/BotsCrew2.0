@@ -234,8 +234,8 @@
 }
 
 .slide-4 .left {
-    margin: auto;
-    margin-top: 70px;
+    /*margin: auto;*/
+    /*margin-top: 70px;*/
     text-align: left;
 }
 
@@ -289,24 +289,37 @@
 }
 
 .slide-4 .right {
-    margin-top: 66px;
+    /*margin-top: 66px;*/
     height: 350px;
     position: relative;
+    overflow: hidden;
+    /*width: 50%;*/
 }
 
 .slide-4 .bot-example {
+    /*padding-right: 26px;*/
     max-height: 350px;
     position: absolute;
-    left: 0;
-    bottom: 88px;
-    transform: translate(22%, 0);
-    width: 70%;
-    height: auto;
-    overflow-y: hidden;
+    /*left: 0;*/
+    bottom: 0;
+    /*transform: translate(22%, 0);*/
+    /*width: 72%;*/
+    /*height: auto;*/
+    overflow-y: scroll;
+    margin-left: 6px;
+    /*z-index: 10000;*/
+    /*margin-bottom: 88px;*/
+}
+
+.slide-4 .middle {
+    max-height: 350px;
+    overflow: hidden;
+    margin-bottom: 88px;
 }
 
 .phrase-box {
     max-width: 66%;
+    width: auto;
     border-radius: 35px;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
@@ -385,6 +398,7 @@
     min-height: 100vh;
     background-color: #FAFAFA;
     padding-right: 0;
+    position: relative;
 }
 
 .slide-6 h2 {
@@ -930,6 +944,7 @@ select {
         height: 250px;
         margin-top: 20px;
     }
+
     .slide-5 .using-description {
         width: 100%;
     }
@@ -998,8 +1013,8 @@ select {
     }
 
     .slide-4 .left {
-        margin-bottom: 100px;
-        margin-top: 0;
+        /*margin-bottom: 100px;*/
+        /*margin-top: 0;*/
     }
 
     .slide-5 .left {
@@ -1027,6 +1042,14 @@ select {
         width:auto !important;
     }
 }
+
+@media (max-width: 816px) and (min-width: 767px) {
+    .slide-4 .middle {
+        max-height: 377px;
+        /*margin-bottom: 144px;*/
+    }
+}
+
 @media (max-width: 767px) {
 
     .bot-btn.white-blue.noborder:hover{color:#2F80ED!important}
@@ -1138,6 +1161,11 @@ select {
         text-align: left;
     }
 
+    .slide-4 .middle {
+        max-height: initial;
+        /*margin-bottom: 144px;*/
+    }
+
     .slide-4 .right img {
         width: 200px;
         margin-top: 2%;
@@ -1213,11 +1241,11 @@ select {
 
 @media (min-width: 761px) and (max-width: 1199px) {
     .slide-4 .left, .slide-4 .right {
-        display: block;
-        clear: both;
+        /*display: block;*/
+        /*clear: both;*/
     }
     .slide-4 .right {
-        margin-left: 33%;
+        /*margin-left: 33%;*/
     }
 }
 
@@ -1321,8 +1349,8 @@ select {
     }
 
     .slide-4 .left {
-        margin-top: 0;
-        padding-left: 0;
+        /*margin-top: 0;*/
+        /*padding-left: 0;*/
     }
     .slide-4 .left p {
         margin-left: 5%;
@@ -1333,18 +1361,17 @@ select {
     }
 
     .slide-4 .right {
-        margin-top: 0;
+        /*margin-top: 0;*/
     }
     .slide-4 .bot-example {
-        max-height: 350px;
-        min-height: 350px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        transform: translate(4%, 0);
-        width: 92%;
-        height: auto;
-        overflow-y: hidden;
+        /*max-height: 350px;*/
+        /*position: absolute;*/
+        /*left: 0;*/
+        /*bottom: 0;*/
+        /*transform: translate(4%, 0);*/
+        /*width: 92%;*/
+        /*height: auto;*/
+        /*overflow-y: hidden;*/
     }
 
     .phrase-box {
