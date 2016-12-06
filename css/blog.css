@@ -68,13 +68,14 @@ h1, h2, p, a {
     background: url("../img/messengerForBusiness.jpg");
 }
 .article.article-3 .preview-img {
-    background: url("../img/messengerForBusiness.jpg");
+    background: url("../img/image1.jpg");
+    background-size: cover;
 }
 .article.article-2 .preview-img {
-    background: url("../img/article-2-img-1.png");
+    background: url("../img/whatAreChatbots1.jpeg");
 }
 .article.article-1 .preview-img {
-    background: url("../img/article-1-img-1.png");
+    background: url("../img/blog_6_1.jpg");
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {

@@ -4,7 +4,7 @@ h2 {
     color: #4F4F4F;
 }
 
-p {
+p, li {
     font-size: 18px;
     line-height: 140%;
     letter-spacing: 0.0166px;
@@ -124,7 +124,7 @@ p {
 
 .article {
     display: inline-block;
-    height: 500px;
+    height: auto;
     /*height: 600px;*/
     /*width: 98%;*/
     margin: 10px auto;
@@ -152,7 +152,7 @@ p {
 
 .article .preview-img {
     display: block;
-    height: 60%;
+    height: 300px;
     width: 100%;
     border-radius: 4px;
     background-size: cover;
@@ -163,17 +163,21 @@ p {
     width: 100%;
 }
 
+.article.article-5 .preview-img {
+    background: url("../img/musement_contract.jpg");
+}
 .article.article-4 .preview-img {
-    background: url("../img/article-4-img-1.png");
+    background: url("../img/messengerForBusiness.jpg");
 }
 .article.article-3 .preview-img {
-    background: url("../img/article-3-img-1.png");
+    background: url("../img/image1.jpg");
+    background-size: cover;
 }
 .article.article-2 .preview-img {
-    background: url("../img/article-2-img-1.png");
+    background: url("../img/whatAreChatbots1.jpeg");
 }
 .article.article-1 .preview-img {
-    background: url("../img/article-1-img-1.png");
+    background: url("../img/blog_6_1.jpg");
 }
 
 .recent p{
