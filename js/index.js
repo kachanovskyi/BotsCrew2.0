@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $('a.page-scroll').click(function () {
-        console.log('scrolled');
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -13,20 +12,22 @@ $(document).ready(function () {
         }
     });
 
-    var progressSlide = 1;
+    var barInitialized = false;
+    var bar;
+    var timer;
+    var progressSlide = 0;
     var didScroll;
     var lastScrollTop = 0;
     var delta = 5;
     var navbarHeight = $('.navbar-fixed-top').outerHeight();
 
     var listElem = $('.slide-4 .bottom ul>li');
-    var displayAmount;
+    var displayAmount = 0;
     for (var i = 0; i < listElem.length - 1; i++) {
         if($(listElem[i]).css('display') === 'block') {
             displayAmount++;
         }
     }
-
 
     $(window).scroll(function(event){
         didScroll = true;
@@ -67,99 +68,136 @@ $(document).ready(function () {
 
     //.bot-example scripts
     var phrases = [
-        { type: 'person', phrase: 'You dude!' },
-        { type: 'bot', phrase: 'Aloha! How can I help You?' },
-        { type: 'person', phrase: 'Can you book a table in one of the nearest 5-stars rated pizzerias?' },
-        { type: 'bot', phrase: 'Sure! Let\'s find the best one for You' },
-        { type: 'person', phrase: 'You dude!' },
-        { type: 'bot', phrase: 'Aloha! How can I help You?' },
-        { type: 'person', phrase: 'Can you book a table in one of the nearest 5-stars rated pizzerias?' },
-        { type: 'bot', phrase: 'Sure! Let\'s find the best one for You' }
+        { type: 'person', phrase: '1.You dude!' },
+        { type: 'bot', phrase: '2.Aloha! How can I help You?' },
+        { type: 'person', phrase: '3.Can you book a table in one of the nearest 5-stars rated pizzerias?' },
+        { type: 'bot', phrase: '4.Sure! Let\'s find the best one for You' },
+        { type: 'person', phrase: '5.You dude!' },
+        { type: 'bot', phrase: '6.Aloha! How can I help You?' },
+        { type: 'person', phrase: '7.Can you book a table in one of the nearest 5-stars rated pizzerias?' },
+        { type: 'bot', phrase: '8.Sure! Let\'s find the best one for You' }
     ];
 
+    var current;
     var addMessages = function() {
-        for (var i = 0; i < phrases.length; i++) {
-            var example = $('.bot-example');
+        current = 0;
+        clearTimeout(timer);
+        timer = setTimeout(function message() {
+            if ( ($w.scrollTop() > $('.slide-5').offset().top) ) {
+                console.log('loop stopped');
+                clearTimeout(timer);
+            }
+
+            var example = $($('.bot-example')[progressSlide]);
             var div = document.createElement('div');
-            div.className = "phrase-box " + phrases[i].type;
-            div.innerHTML = phrases[i].phrase;
+            div.className = "phrase-box " + phrases[current].type;
+            div.innerHTML = phrases[current].phrase;
             $(div).appendTo(example).fadeOut(0);
-            setTimeout(removeFirstElement.bind(null, example.children()[i]), 1000 * (i));
-        }
+            // console.log(div);
+            removeFirstElement(example.children()[current]);
+            current++;
+            // if(current > 4) {
+            //     // $(example.children()[0]).remove();
+            //     example = $($('.bot-example')[progressSlide])
+            //     console.log('removed', example.children()[0]);
+            // }
+            if(current < 8) {
+                timer = setTimeout(message, 800);
+            } else {
+                current = 0;
+            }
+
+        }, 800);
     };
 
     var removeFirstElement = function(phraseObj) {
         $(phraseObj).fadeIn("slow");
-        var example = $('.bot-example');
-        var exampleHeight = example.outerHeight();
-        if(exampleHeight > 333) {
-            var child = example.children()[0];
-            example.find('div').eq(0).remove();
+        var example = $($('.bot-example')[progressSlide]);
+        console.log(example.children()[example.children().length - 1]);
+        // var exampleHeight = $(example[progressSlide]).outerHeight();
+        // for(var i = 0; i < example.children().length; i++) {
+        //     console.log(example.children()[i]);
+        // }
+        if(example.children().length > 4) {
+            // var child = ;
+            $(example.children()[0]).remove();
+            console.log('removed ' + example.children().length);
+            // example.find('div').eq(0).remove();
         }
     };
 
-    //progress bar
-    var bar = new ProgressBar.Line('.progressbar-container', {
-        strokeWidth: 1,
-        duration: 7000,
-        color: '#2F80ED',
-        trailColor: '#DFDFDF',
-        trailWidth: 6,
-        svgStyle: {width: '100%', height: '100%'}
-    });
+
 
     var progressBarInit = function () {
-        console.log(progressSlide, 'progressSlide');
-        // addMessages(phrases);
+        var listItemLink = $('.slide-4 .bottom ul>li>a');
+        addMessages();
+
+        $($('.slide-4 .bottom ul>li .progressbar-container')[0]).remove();
+        $($('.slide-4 .bottom ul>li')[progressSlide]).append('<div class="progressbar-container"></div>');
+        listItemLink.removeClass('active');
+        $(listItemLink[progressSlide]).addClass('active');
+        bar = new ProgressBar.Line('.progressbar-container', {
+            strokeWidth: 1,
+            duration: 7000,
+            color: '#2F80ED',
+            trailColor: '#DFDFDF',
+            trailWidth: 6,
+            svgStyle: {width: '100%', height: '100%'}
+        });
+
         bar.animate(1.0, function() {
-            var messagesLength = $('.bot-example').children().length;
-            $($('.slide-4 .bottom ul>li')[progressSlide]).append('<div class="progressbar-container"></div>');
-            $($('.slide-4 .bottom ul>li .progressbar-container')[0]).remove();
-            $('.slide-4 .bottom ul>li>a').removeClass('active');
-            $($('.slide-4 .bottom ul>li>a')[progressSlide]).addClass('active');
-            bar = new ProgressBar.Line('.progressbar-container', {
-                strokeWidth: 1,
-                // easing: 'easeInOut',
-                duration: 7000,
-                color: '#2F80ED',
-                trailColor: '#DFDFDF',
-                trailWidth: 6,
-                svgStyle: {width: '100%', height: '100%'}
-            });
+            var example = $('.bot-example');
             if(progressSlide < 6) {
                 progressSlide++;
                 $('#botUsesCard').carousel('next');
             } else {
                 progressSlide = 0;
                 $('.slide-4 .bottom ul>li .progressbar-container').remove();
-                // $($('.slide-4 .bottom ul>li')[progressSlide]).append('<div class="progressbar-container"></div>');
+                $($('.slide-4 .bottom ul>li')[progressSlide]).append('<div class="progressbar-container"></div>');
             }
-            $('.bot-example').children().remove();
+            if(progressSlide === 6) {
+                progressSlide = 0;
+            }
+            example.children().remove();
             progressBarInit();
-
-            bar.animate(0.0, {duration: 1000}, function () {
-                progressBarInit();
-            });
         });
     };
+
+    $('.slide-4 .bottom ul>li>a').click(function () {
+        var item = $('#botUsesCard .item');
+        var listItemLink = $('.slide-4 .bottom ul>li>a');
+
+        listItemLink.removeClass('active');
+        $(this).addClass('active');
+        bar.stop();
+        bar.set(0.0);
+        progressSlide = listItemLink.index(this);
+
+        $($('.slide-4 .bottom ul>li .progressbar-container')[0]).remove();
+        $($('.slide-4 .bottom ul>li')[progressSlide]).append('<div class="progressbar-container"></div>');
+        progressBarInit();
+    });
+
     var targetOffset = $('.slide-4').offset().top;
-    var $w = $(window).scroll(function(){
-        if ( $w.scrollTop() > targetOffset ) {
-            progressBarInit(progressSlide);
+    var $w = $(window).scroll(function() {
+        var slide5 = $('.slide-5');
+        if ( !barInitialized && ($w.scrollTop() > targetOffset) && ($w.scrollTop() < slide5.offset().top) ) {
+            progressBarInit();
+            barInitialized = true;
         }
 
-        if ( $w.scrollTop() > $('.slide-5').offset().top ) {
-            bar = {};
+        if ( barInitialized && (($w.scrollTop() > slide5.offset().top) || $w.scrollTop() < targetOffset)) {
+            clearTimeout(timer);
+            bar.stop();
+            bar.set(0.0);
+            $($('.bot-example')[progressSlide]).children().remove();
+            barInitialized = false;
         }
     });
 
 
-    var firstDisplayed = 0;
-        $(window).on('resize', function(){
+    $(window).on('resize', function(){
         var listElem = $('.slide-4 .bottom ul>li');
-        console.log('window resized');
-        console.log(listElem.length, 'length of listElem');
-        firstDisplayed = 0;
         displayAmount = 0;
         for (var i = 0; i < listElem.length - 1; i++) {
             if($(listElem[i]).css('display') === 'block') {
@@ -197,104 +235,3 @@ $(document).ready(function () {
         return false;
     })
 });
-
-// var listScrollNext = function () {
-//     // console.log(window.getComputedStyle(document.getElementsByClassName('bottom-list-item')[0]).getPropertyValue('display'), 'blah');
-//     var elems = document.getElementsByClassName('bottom-list-item');
-//     console.log(elems, 'blah');
-//     if($(listElem[listElem.length - 2]).css('display') == 'block') {
-//         console.log('first if-block');
-//         for(var j = 0; j < (listElem.length - 1); j++) {
-//             if(j < displayAmount) {
-//                 $(listElem[j]).css('display', 'block');
-//                 // document.getElementsByClassName('bottom-list-item')[i].style.display = 'block';
-//                 // console.log($(listElem[j]).css('display'),'lwifjpnperenjklgnelrnjlergnjlergnljerngjlergnjlernglerr');
-//                 console.log('reloading blocks');
-//             } else {
-//                 // console.log(elems[i], 'elems');
-//                 // console.log($(listElem[j]).css('display'),'lwifjpnperenjklgnelrnjlergnjlergnljerngjlergnjlernglerr');
-//                 // elems[i].style.display = 'none';
-//                 $(listElem[j]).css('display', 'none');
-//                 console.log($(listElem[j]).css('display'), 'ukuku');
-//                 // console.log(document.getElementsByClassName('bottom-list-item')[i], 'reloading hidden elements');
-//             }
-//         }
-//     }
-//     for(var i = 0; i < listElem.length - 1; i++) {
-//         console.log('loop one');
-//         // console.log($(listElem[j]).css('display'));
-//         if($(listElem[i]).css("display") === "block") {
-//             console.log('block found ' + i);
-//             document.getElementsByClassName('bottom-list-item')[i].style.display = 'none';
-//             // $(listElem[i]).css("display", "none");
-//             break;
-//         }
-//     }
-//     for(i; i < listElem.length - 1; i++) {
-//         console.log('loop two ' + $(listElem[i]).css('display'));
-//         if($(listElem[i]).css('display') === 'none') {
-//             document.getElementsByClassName('bottom-list-item')[i].style.display = 'block';
-//             // $(listElem[i]).css("display", "block");
-//             console.log('hidden element found, displaying next ' + i + " " + $(listElem[i]).css('display'));
-//             break;
-//         }
-//     }
-// };
-
-// var listScrollNext = function () {
-//     // var elemFound = false;
-//     var lastElem = $(listElem[listElem.length - 1]);
-//     console.log(displayAmount,'displayAmount');
-//     // var windowWidth = $(window).width();
-//     // var listWidth = $(window).width() - lastElem.css('width');
-//     // console.log(lastElem.css('width'), 'width1');
-//     // console.log(lastElem.outerWidth(), 'width2');
-//     // console.log(windowWidth, 'window width');
-//     // console.log(firstDisplayed + " " + displayAmount, 'firstDisplayed + displayAmount');
-//     // console.log((listElem.length-1), 'listElem.length - 1');
-//
-//     // console.log(listElem.length, 'lenght');
-//     // console.log($($('.slide-4 .bottom ul>li')[0]).css('display'));
-//     if((firstDisplayed + displayAmount) === (listElem.length - 1)) {
-//         alert(firstDisplayed + " " + displayAmount + ': firstDisplayed + displayAmount');
-//         alert((listElem.length-1) + ' listElem.length - 1');
-//         for(var i = 0; i < displayAmount; i++) {
-//             $(listElem[i]).css('display', 'block');
-//             // $(listElem[i]).css('width', elementWidth);
-//             // var arrowWidth = windowWidth - displayAmount*elementWidth;
-//             firstDisplayed = 0;
-//             // $(lastElem).css('width', ($(window).css('width') - displayAmount*elementWidth));
-//             // console.log(($(window).css('width') - ((displayAmount*elementWidth) + 'px')), 'TEST');
-//             // console.log($(lastElem).css('width'), 'lastElem width404');
-//             console.log('displayed new');
-//         }
-//         for(i = displayAmount; i < listElem.length - 1; i++) {
-//             // $(listElem[i]).css('display', 'none');
-//         }
-//     } else {
-//         console.log('else block');
-//         for (i = 0; i < listElem.length - 1; i++) {
-//             if($(listElem[i]).css('display') === 'block') {
-//                 firstDisplayed = i;
-//                 $(listElem[i]).css('display', 'none');
-//                 $(listElem[i + displayAmount]).css('display', 'block');
-//                 // elementWidth = $(listElem[i]).css('width');
-//                 // console.log(elementWidth, 'elementWidth1111');
-//                 console.log(firstDisplayed, 'firstDisplayed');
-//                 console.log(i+displayAmount, 'i+displayAmount');
-//                 console.log($(listElem[i + displayAmount]).css('width'), 'this element width');
-//                 break;
-//             }
-//         }
-//         // $(listElem[i]).css('display', 'none');
-//         // $(listElem[i + displayAmount]).css('display', 'block');
-//         // elementWidth -=1;
-//         // $(listElem[i + displayAmount]).css('width', elementWidth);
-//         // var arrowWidth = (windowWidth - displayAmount*elementWidth);
-//         // console.log(arrowWidth, 'arrowWidth');
-//         // $(lastElem).css('width', arrowWidth);
-//
-//     }
-//     return false;
-// };
-// listScrollNext();
