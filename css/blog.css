@@ -61,8 +61,11 @@ h1, h2, p, a {
     width: 100%;
 }
 
-.article.article-4 .preview-img {
+.article.article-5 .preview-img {
     background: url("../img/musement_contract.jpg");
+}
+.article.article-4 .preview-img {
+    background: url("../img/messengerForBusiness.jpg");
 }
 .article.article-3 .preview-img {
     background: url("../img/messengerForBusiness.jpg");
