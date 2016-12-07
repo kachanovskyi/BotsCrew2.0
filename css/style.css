@@ -1,3 +1,6 @@
+nav ul>li.careers {
+    margin-right: 15px;
+}
 
 /*above-the-fold styles end*/
 .nopadding {
@@ -38,7 +41,8 @@
 .bot-btn:hover .play-img {
     background: url("../img/play-white.svg");
     transition-duration: 0.5s;
-    margin-bottom: -1px;
+    margin-bottom: 0;
+    padding-bottom: 5px;
 }
 
 .bot-btn.select {
@@ -1243,16 +1247,6 @@ select {
         display: block;
         padding: 20px 20px;
         margin:0 auto;
-    }
-}
-
-@media (min-width: 761px) and (max-width: 1199px) {
-    .slide-4 .left, .slide-4 .right {
-        /*display: block;*/
-        /*clear: both;*/
-    }
-    .slide-4 .right {
-        /*margin-left: 33%;*/
     }
 }
 
