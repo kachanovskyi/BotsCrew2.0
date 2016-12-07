@@ -276,6 +276,13 @@
 .slide-4 .bottom ul>li:last-child {
     border-right: none;
 }
+.slide-4 .bottom ul>li:last-child:hover {
+    cursor: pointer;
+}
+
+.slide-4 .bottom ul>li:last-child>img {
+    padding-top: 16px;
+}
 
 .slide-4 .bottom ul>li a {
     font-size: 18px;
@@ -1251,7 +1258,7 @@ select {
 
 @media (max-width: 575px) {
     .slide-6 .musement>img {
-        width: 100%;
+        width: 96%;
         margin-left: 4%;
         height: auto;
         margin-top: 20px;
@@ -1590,7 +1597,7 @@ select {
     }
 
     .slide-6 .musement>img {
-        margin-left: 4%;
+        margin-left: 2%;
     }
 }
 @media (max-width: 379px) {
