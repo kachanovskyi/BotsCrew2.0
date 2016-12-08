@@ -57,14 +57,20 @@
       <div class="slide-2 container-fluid" >
         <div class="row">
           <div class="content" id="introduction">
-            <div class="cos-xs-12 col-sm-5 col-md-5 col-lg-5 bot-preview-block">
-              <img src="img/iphone_image.png" class="iphone-image col-xs-6 col-sm-8 col-md-8 col-lg-7">
+            <div class="cos-xs-12 col-sm-5 col-md-5 col-lg-5 bot-preview-block" style="overflow: hidden; height:638px !important;">
+              <div style="position: relative; height: 544px; margin-top: 102px; background: url('img/musement.png') no-repeat center">
+                <!--<img src="img/musement.png" class="iphone-image" style="">-->
+                <video width="256" autoplay="" loop="" muted style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0);">
+                  <source src="video/MusementBot.mp4" type="video/mp4">
+                  <source src="video/Avel.ogg" type="video/ogg"> Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
             <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 right">
               <div class="description col-xs-offset-1 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-xs-10 col-sm-8 col-md-8 col-lg-8">
                 <h2>What are chatbots?</h2>
                 <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms. These Chatbots are intuitive to use and can be implemented into several fields of business such as e-commerce, entertainment, news, customer support, delivery services or corporate information exchange.</p>
-                <a href="#" class="menu-item bot-btn white-blue">Discover our bots</a>
+                <a href="#discover-our-bots" class="menu-item bot-btn white-blue page-scroll">Discover our bots</a>
               </div>
             </div>
           </div>
@@ -236,7 +242,7 @@
       <div class="slide-6">
         <div class="top col-sm-offset-1 col-sm-10">
           <h2 class="text-center">We're proud of our bots</h2>
-          <p>A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
+          <p id="discover-our-bots">A Chatbot is a virtual assistant powered by rules and algorithms that lets your customers interact with your business through several messaging platforms</p>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 carousel-block">
           <div class="row">
@@ -482,7 +488,7 @@
         <div class="middle">
           <div class="col-lg-4"></div>
           <div class="col-lg-4">
-            <form name="contactForm" id="contact-form">
+            <form name="contactForm" id="contact-form" autocomplete="off">
               <input type="text" name="name" placeholder="Your name" required>
               <input type="email" placeholder="Your e-mail address" required>
 
@@ -496,8 +502,9 @@
                 <option value="budget2">budget</option>
               </select>
 
-              <input type="text" placeholder="Project description" required>
-              <input type="submit" value="Send Message" class="menu-item bot-btn white-snow">
+              <!--<input type="text" placeholder="Project description" required>-->
+              <textarea placeholder="Project description" rows="1" cols="33" required></textarea>
+              <input type="submit" value="Send Message" class="menu-item bot-btn white-snow message-send">
             </form>
             <a href="https://www.facebook.com/botsmarket" target="_blank"><img src="img/fb.png" class="social-icon left"></a>
             <a href="https://github.com/" target="_blank"><img src="img/github.png" class="social-icon"></a>
@@ -523,6 +530,7 @@
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script defer src="js/progressbar.min.js"></script>
+  <script defer src="js/autosize.min.js"></script>
   <script defer src="js/index.js"></script>
 </body>
 </html>

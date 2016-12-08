@@ -29,7 +29,7 @@ $(document).ready(function () {
         }
     }
 
-    $(window).scroll(function(event){
+    $(window).scroll(function(event) {
         didScroll = true;
     });
 
@@ -47,7 +47,7 @@ $(document).ready(function () {
             return;
 
 
-        if (st > lastScrollTop && st > navbarHeight){
+        if (st > lastScrollTop && st > navbarHeight) {
             $('.navbar-fixed-top').removeClass('nav-down').addClass('nav-up');
         } else {
             if(st + $(window).height() < $(document).height()) {
@@ -58,12 +58,12 @@ $(document).ready(function () {
         lastScrollTop = st;
     }
 
-    function setHeight() {
-        var height = $('.slide-2 .right').outerHeight();
-        $('.slide-2 .bot-preview-block').height(height);
-    }
-    setHeight();
-    $(window).resize(setHeight);
+    // function setHeight() {
+    //     var height = $('.slide-2 .right').outerHeight();
+    //     $('.slide-2 .bot-preview-block').height(height);
+    // }
+    // setHeight();
+    // $(window).resize(setHeight);
 
 
     //.bot-example scripts
@@ -84,7 +84,6 @@ $(document).ready(function () {
         clearTimeout(timer);
         timer = setTimeout(function message() {
             if ( ($w.scrollTop() > $('.slide-5').offset().top) ) {
-                console.log('loop stopped');
                 clearTimeout(timer);
             }
 
@@ -180,7 +179,7 @@ $(document).ready(function () {
         progressBarInit();
     });
 
-    var targetOffset = $('.slide-4').offset().top;
+    var targetOffset = ($('.slide-3').offset().top + $(window).height());
     var $w = $(window).scroll(function() {
         var slide5 = $('.slide-5');
         if ( !barInitialized && ($w.scrollTop() > targetOffset) && ($w.scrollTop() < slide5.offset().top) ) {
@@ -239,5 +238,7 @@ $(document).ready(function () {
         console.log('worked');
         listScrollNext();
         return false;
-    })
+    });
+
+    autosize($('textarea'));
 });

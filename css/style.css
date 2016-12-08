@@ -10,15 +10,19 @@ nav ul>li.careers {
 .bot-btn.white-snow {
     background: #FFFFFF;
     color: #2F80ED !important;
-    border: 1px solid #2F80ED;
+    border: none !important;
     border-radius: 4px;
     margin: 7px;
-    padding: 7px 15px !important;
+    padding: 15px 23px;
 }
 .bot-btn.white-snow:hover {
     background-color: #F2F2F2 !important;
     transition-duration: 0.5s;
     text-decoration: none;
+}
+
+.bot-btn.white-snow.message-send {
+    padding: 17px 23px;
 }
 
 .bot-btn.blue-dark-blue {
@@ -80,19 +84,26 @@ nav ul>li.careers {
 
 .slide-2 .bot-preview-block {
     padding-left: 0;
+    padding-right: 0;
     background-color: #2F80ED;
-    position: relative;
+    /*position: relative;*/
 }
 
 .iphone-image {
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
 .slide-2 .iphone-image {
-    left: 50%;
-    transform: translate(-50%, 0);
-    max-height: 100%;
+    background: url("../img/musement.png");
+    display: block;
+    bottom: 0;
+    /*left: 50%;*/
+    /*transform: translate(-50%, 0);*/
+    /*max-height: 100%;*/
+    /*width: 100%;*/
+    height: 100%;
+    width: auto;
 }
 
 .slide-2 .description {
@@ -186,7 +197,6 @@ nav ul>li.careers {
 .slide-3 .graphic-img {
     width: 100%;
     height: auto;
-    /*height: 400px;*/
 }
 
 .slide-3 .right p {
@@ -657,7 +667,7 @@ nav ul>li.careers {
 .slide-8 .bottom {
     min-height: 15vh;
     text-align: center;
-    padding-top: 28px;
+    padding-top: 37px;
     padding-bottom: 20px;
 }
 
@@ -762,8 +772,10 @@ nav ul>li.careers {
 }
 
 #contact-form input[type=text],
-input[type=email],
-select {
+#contact-form input[type=email],
+#contact-form textarea,
+#contact-form select
+{
     width: 100%;
     height: 60px;
     background: #2F80ED;
@@ -778,8 +790,31 @@ select {
     color: #FFFFFF;
     mix-blend-mode: normal;
 }
+#contact-form textarea {
+    padding-top: 22px;
+    padding-bottom: 18px;
+    line-height: 140%;
+}
 
-#contact-form input::-webkit-input-placeholder {
+/*#contact-form input[type=text]:-webkit-autofill,*/
+/*#contact-form input[type=text]:-webkit-autofill:hover,*/
+/*#contact-form input[type=text]:-webkit-autofill:focus,*/
+/*#contact-form input[type=text]:-webkit-autofill,*/
+/*#contact-form textarea:-webkit-autofill,*/
+/*#contact-form textarea:-webkit-autofill:hover,*/
+/*#contact-form textarea:-webkit-autofill:focus,*/
+/*#contact-form select:-webkit-autofill,*/
+/*#contact-form select:-webkit-autofill:hover,*/
+/*#contact-form select:-webkit-autofill:focus */
+/*{*/
+    /*background-color: #2e6da4;*/
+/*}*/
+
+#contact-form input:focus, #contact-form select:focus, #contact-form textarea:focus {
+    outline: none;
+}
+
+#contact-form input::-webkit-input-placeholder, #contact-form textarea::-webkit-input-placeholder {
     color: #FFFFFF;
 }
 
@@ -862,11 +897,6 @@ select {
         padding-bottom: 25px;
     }
 
-    .slide-3 .graphic-img {
-        width: 100%;
-        height: 400px;
-    }
-
     .slide-6 .bot-card p.description {
         width: 55%;
     }
@@ -918,10 +948,6 @@ select {
 }
 
 @media (min-width: 992px) {
-    .slide-2, .slide-2 .right, .slide-2 .bot-preview-block {
-        min-height: 100vh;
-    }
-
     .slide-6 .bot-card p, .slide-6 .bot-card h2 {
         text-align: left;
     }
@@ -955,9 +981,9 @@ select {
         margin-top: 20px;
     }
 
-    .slide-3 .graphic-img {
-        height: 250px;
-        margin-top: 20px;
+    .slide-2 .iphone-image {
+        height: 92%;
+        width: auto;
     }
 
     .slide-5 .using-description {
@@ -1025,6 +1051,10 @@ select {
 @media (min-width: 768px) {
     .navbar-header .bot-btn.white-blue.contact {
         display: none;
+    }
+
+    .slide-2 .right {
+        height: 638px;
     }
 
     .slide-4 .left {
@@ -1129,12 +1159,13 @@ select {
     }
 
     .slide-2 .col-lg-7 {
-       min-height: 72vh;
+        min-height: 72vh;
+        height: auto;
     }
 
     .slide-2 .description {
         /*margin-top: 66px;*/
-        padding-bottom: 66px;
+        padding-bottom: 88px;
     }
 
     .slide-2 .bot-btn {
@@ -1143,22 +1174,12 @@ select {
         position: absolute;
     }
 
-    .iphone-image {
-        height: 85%;
-        width: auto;
-    }
-
     .slide-3 .top {
         text-align: left;
     }
     .slide-3 .top p {
         margin-top: 20px;
         margin-left: 20px;
-    }
-
-    .slide-3 .graphic-img {
-        height: 350px;
-        margin-top: 20px;
     }
 
     .slide-4 h2 {
@@ -1316,12 +1337,12 @@ select {
         margin-left: 2%;
         text-align: left;
     }
-    .slide-2 .description {
-        margin-bottom: 20px;
-        margin-top: 33px;
-    }
+    /*.slide-2 .description {*/
+        /*margin-bottom: 20px;*/
+        /*margin-top: 33px;*/
+    /*}*/
     .slide-2, .slide-2 .bot-preview-block, .slide-2 .col-lg-7 {
-        min-height: 66vh;
+        min-height: 72vh;
     }
 
     .slide-2 .col-xs-12.col-sm-6.col-md-6.col-lg-7 {
@@ -1334,11 +1355,6 @@ select {
     .slide-3 .top p {
         margin-top: 20px;
         width: 95%;
-    }
-
-    .slide-3 .graphic-img {
-        height: 300px;
-        margin-top: 20px;
     }
 
     .slide-3 .right {
@@ -1478,10 +1494,6 @@ select {
     .slide-3 .top p {
         margin-left: 12px;
     }
-    .slide-3 .graphic-img {
-        height: 180px;
-        margin-top: 20px;
-    }
 
     .bot-btn.select, .bot-btn.select-side {
         padding: 14px 100px !important;
@@ -1526,6 +1538,7 @@ select {
     .menu-item.bot-btn.blue-dark-blue.messenger {
         padding: 14px 12px;
     }
+
 }
 
 @media (max-width: 432px) {
@@ -1533,6 +1546,18 @@ select {
         display: block;
         width: 100%;
         margin: 0 auto;
+    }
+
+    .slide-2 .right {
+        height: 593px;
+    }
+    .slide-2 .description {
+        margin-bottom: 0;
+        padding-bottom: 100px;
+    }
+    .slide-2 .bot-btn {
+        margin-top: 10px;
+        margin-bottom: 0;
     }
 }
 
@@ -1563,10 +1588,6 @@ select {
         min-height: 66vh;
     }
 
-    .slide-2 .iphone-image {
-        width: 90%;
-    }
-
     .slide-2 .description {
         margin-bottom: 95px;
     }
@@ -1588,10 +1609,6 @@ select {
     }
     .navbar li>.menu-item.bot-btn {
         padding-left: 33%;
-    }
-
-    .slide-2 .iphone-image {
-        width: 100%;
     }
 
     .slide-6 .musement>img {
@@ -1626,11 +1643,6 @@ select {
 }
 
 @media (max-width: 360px) {
-    .slide-2 .iphone-image {
-        max-height: 72%;
-        width: 100%;
-    }
-
     .left-arrow {
         margin-left: 1% !important;
     }

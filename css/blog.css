@@ -44,7 +44,7 @@ h1, h2, p, a {
 .article p {
     color: #828282;
 }
-.article a {
+.article .read-more {
     color: #2F80ED;
 }
 
