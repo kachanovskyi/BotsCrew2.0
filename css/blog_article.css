@@ -227,7 +227,7 @@ p, li {
     .social-share {
         margin-bottom: 33px;
     }
-    .social-share .text {
-        display: none;
-    }
+    /*.social-share .text {*/
+        /*display: none;*/
+    /*}*/
 }

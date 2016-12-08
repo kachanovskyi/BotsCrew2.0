@@ -182,7 +182,7 @@ nav ul>li.careers {
 
 
 .slide-3 .advantages-list li {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     display: block;
     float: left;
     list-style: none;
@@ -349,7 +349,7 @@ nav ul>li.careers {
     max-width: 66%;
     width: auto;
     border-radius: 35px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 18px;
     line-height: 100%;
     padding: 13px 20px;
@@ -612,7 +612,7 @@ nav ul>li.careers {
 
 .slide-8 .pricing .block .bottom-subblock {
     height:70px;
-    margin-bottom: 40px;
+    margin-bottom: 33px;
     padding-top: 26px;
 }
 .slide-8 .pricing.center .block .bottom-subblock {
@@ -782,7 +782,7 @@ nav ul>li.careers {
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     margin: auto;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -1022,9 +1022,6 @@ nav ul>li.careers {
         padding-left: 20px;
     }
 
-    .slide-7 .content p {
-        padding: 8px 30px;
-    }
     .customer-img {
         margin-left: 40px;
     }
@@ -1247,16 +1244,16 @@ nav ul>li.careers {
         margin: 20px auto;
     }
 
-    .slide-7 .video-preview-img.left {
-        margin-left: 0;
-    }
-    .slide-7 .video-preview-img.center {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    .slide-7 .video-preview-img.right {
-        margin-right: 0;
-    }
+    /*.slide-7 .video-preview-img.left {*/
+        /*margin-left: 0;*/
+    /*}*/
+    /*.slide-7 .video-preview-img.center {*/
+        /*margin-left: 5%;*/
+        /*margin-right: 5%;*/
+    /*}*/
+    /*.slide-7 .video-preview-img.right {*/
+        /*margin-right: 0;*/
+    /*}*/
 
     .slide-8 .pricing.center .block {
         box-shadow: none;
@@ -1428,16 +1425,24 @@ nav ul>li.careers {
         width: 92%;
     }
 
-    .slide-8 .middle p {
+    .slide-8 .middle p, .slide-8 .bottom p{
         width: 92%;
+    }
+    .bot-btn.blue-dark-blue.request {
+        padding: 14px 18px;
     }
 
     .slide-8 .pricing .block {
         margin-top: -50px;
     }
 
+    .slide-8 .bottom {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
     .slide-8 .bottom p {
-        padding-bottom: 30px;
+        padding-bottom: 23px;
+        margin-bottom: 0;
     }
 
     .bot-btn.blue-dark-blue {
@@ -1523,10 +1528,8 @@ nav ul>li.careers {
     }
 
     .slide-9 .top {
-        margin-top: 30px;
         min-height: 100px;
         background: linear-gradient(160deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 79%), url("../img/map.png");
-
     }
 
     .left-arrow {

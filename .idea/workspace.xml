@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b84ffc62-3f88-4b9b-862e-881918df00ee" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/blog_article.css" afterPath="$PROJECT_DIR$/css/blog_article.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musement-raised-millions.html" afterPath="$PROJECT_DIR$/musement-raised-millions.html" />
     </list>
     <ignored path="botscrew 2.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +30,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="505" column="93" selection-start-line="505" selection-start-column="93" selection-end-line="505" selection-end-column="93" />
+            <state relative-caret-position="170">
+              <caret line="10" column="152" selection-start-line="10" selection-start-column="152" selection-end-line="10" selection-end-column="152" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -41,18 +45,18 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="85" column="66" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
+            <state relative-caret-position="134">
+              <caret line="202" column="26" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="794" column="25" selection-start-line="794" selection-start-column="25" selection-end-line="794" selection-end-column="25" />
+            <state relative-caret-position="346">
+              <caret line="784" column="27" selection-start-line="784" selection-start-column="27" selection-end-line="784" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -88,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="musement-raised-millions.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="musement-raised-millions.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/musement-raised-millions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="110" column="35" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="35" />
+            <state relative-caret-position="374">
+              <caret line="105" column="34" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -101,8 +105,8 @@
       <file leaf-file-name="blog_article.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/blog_article.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+            <state relative-caret-position="394">
+              <caret line="231" column="7" selection-start-line="229" selection-start-column="6" selection-end-line="231" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -150,11 +154,11 @@
         <option value="$PROJECT_DIR$/css/blog.css" />
         <option value="$PROJECT_DIR$/blog.html" />
         <option value="$PROJECT_DIR$/js/index.js" />
-        <option value="$PROJECT_DIR$/musement-raised-millions.html" />
         <option value="$PROJECT_DIR$/js/blog_footer.js" />
-        <option value="$PROJECT_DIR$/css/blog_article.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/css/blog_article.css" />
+        <option value="$PROJECT_DIR$/musement-raised-millions.html" />
       </list>
     </option>
   </component>
@@ -375,12 +379,12 @@
       <workItem from="1481110307142" duration="3710000" />
       <workItem from="1481118857323" duration="9384000" />
       <workItem from="1481138475416" duration="5205000" />
-      <workItem from="1481179024702" duration="12901000" />
+      <workItem from="1481179024702" duration="15318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="494314000" />
+    <option name="totallyTimeSpent" value="496731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -706,14 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="85" column="66" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/blog_footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -722,26 +718,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/blog_article.css">
+    <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musement-raised-millions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="110" column="35" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="35" />
+        <state relative-caret-position="134">
+          <caret line="202" column="26" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="505" column="93" selection-start-line="505" selection-start-column="93" selection-end-line="505" selection-end-column="93" />
+        <state relative-caret-position="170">
+          <caret line="10" column="152" selection-start-line="10" selection-start-column="152" selection-end-line="10" selection-end-column="152" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -753,8 +741,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="794" column="25" selection-start-line="794" selection-start-column="25" selection-end-line="794" selection-end-column="25" />
+        <state relative-caret-position="346">
+          <caret line="784" column="27" selection-start-line="784" selection-start-column="27" selection-end-line="784" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/blog_article.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="231" column="7" selection-start-line="229" selection-start-column="6" selection-end-line="231" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musement-raised-millions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="105" column="34" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
           <folding />
         </state>
       </provider>
