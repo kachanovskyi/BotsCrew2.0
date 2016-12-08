@@ -208,7 +208,11 @@ $(document).ready(function () {
         }
         var middle = $('.slide-4 .middle');
         var maxHeight = middle.height();
-        middle.css('max-height', maxHeight);
+        if($(window).width() < 767) {
+            middle.css('max-height', (maxHeight * 2));
+            console.log('window less than 767');
+        }
+        console.log(middle.css('max-height'));
     });
 
     var counter = 0;
