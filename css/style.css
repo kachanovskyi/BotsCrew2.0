@@ -1,6 +1,13 @@
-/*nav ul>li.careers {*/
-    /*margin-right: 15px;*/
-/*}*/
+nav ul>li.careers {
+    margin-right: 15px;
+}
+
+.carousel-control.left, .carousel-control.right {
+    -webkit-transition-property: none;
+    -moz-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none !important;
+}
 
 /*above-the-fold styles end*/
 .nopadding {
@@ -442,10 +449,6 @@
     color: #828282;
 }
 
-.slide-6 .item {
-    position: relative;
-}
-
 .slide-6 .top p {
     width: 55%;
     margin: 33px auto;
@@ -456,8 +459,8 @@
 }
 
 .slide-6 .carousel-block {
-    max-height: 555px;
-    overflow: hidden;
+    /*height: 555px;*/
+    /*overflow: hidden;*/
 }
 
 .slide-6 .col-lg-1>a .carousel-control {
@@ -1011,7 +1014,7 @@
     }
 
     .musement {
-        margin-top: 30px;
+        /*margin-top: 30px;*/
     }
 
     .menu-item.bot-btn.blue-dark-blue.messenger {
@@ -1077,7 +1080,7 @@
     }
 
     #carouselBotCard {
-        padding-top: 30px;
+        /*padding-top: 30px;*/
     }
 
     .fb-messenger-img {
@@ -1096,9 +1099,9 @@
 
     .bot-btn.white-blue.noborder:hover{color:#2F80ED!important}
 
-    /*.navbar-default .navbar-nav>li:nth-child(2) {*/
-        /*margin-left: 6%;*/
-    /*}*/
+    .navbar-nav>li:last-child {
+        padding-right: 0;
+    }
 
     .slide-1 {
         transform: translate(0, 12%);
@@ -1122,21 +1125,20 @@
         margin: 12px;
     }
 
+    .navbar-nav {
+        margin: 0;
+        padding: 24px 0;
+        text-align: center;
+    }
     .navbar-default .navbar-nav>li {
-        width: 20%;
+        margin: 0 3.3%;
         display: inline-block;
     }
-    .navbar-default .navbar-nav>li:first-child {
+    .navbar-default .navbar-nav>li:nth-child(2), .navbar-default .navbar-nav>li:nth-child(3) {
         /*width:16%;*/
-        /*margin-right: 12%;*/
-        /*margin-left: 6%;*/
     }
-
-    .navbar-default .navbar-nav>li>a {
-        display: inline-block;
-        float: left;
-        width: 20%;
-        margin-left: 22%;
+    .navbar-default .navbar-nav>li:nth-child(4), .navbar-default .navbar-nav>li:nth-child(5) {
+        /*width:18%;*/
     }
 
     .navbar li>.menu-item.bot-btn {
@@ -1161,7 +1163,6 @@
     }
 
     .slide-2 .description {
-        /*margin-top: 66px;*/
         padding-bottom: 88px;
     }
 
@@ -1196,7 +1197,6 @@
 
     .slide-4 .middle {
         max-height: initial;
-        /*margin-bottom: 144px;*/
     }
 
     .slide-4 .right img {
@@ -1479,19 +1479,13 @@
     }
 }
 
+@media (min-width: 500px) and (max-width: 513px) {
+    .navbar-default .navbar-nav>li {
+        margin: 0 3.1%;
+    }
+}
+
 @media (max-width: 499px) {
-    /*.navbar-default .navbar-nav>li:nth-child(2) {*/
-        /*margin-left: 0;*/
-    /*}*/
-    /*.navbar-default .navbar-nav>li {*/
-        /*margin-left: 2%;*/
-    /*}*/
-    /*.navbar-default .navbar-nav>li>a {*/
-        /*margin-left: 12%;*/
-    /*}*/
-    /*.navbar-default .navbar-nav>li:last-child {*/
-        /*margin-left: 10%;*/
-    /*}*/
     .nav>li>a {
         padding: 0 !important;
     }
@@ -1605,7 +1599,7 @@
         margin-left: 4% !important;
     }
     .navbar-default .navbar-nav>li>a {
-        margin-left: 0;
+        /*margin-left: 0;*/
     }
     .nav>li>a {
         padding: 0;
@@ -1645,7 +1639,15 @@
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 369px) {
+    .navbar-nav {
+        padding: 24px 0;
+    }
+    .navbar-default .navbar-nav>li {
+        margin: 0 2.3%;
+        display: inline-block;
+    }
+
     .left-arrow {
         margin-left: 1% !important;
     }
